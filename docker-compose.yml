@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  esm-landing:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: esm-landing
+    ports:
+      - "3030:80"
+    restart: unless-stopped

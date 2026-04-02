@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SmartProDS — Brand Guidelines v1.0</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  /* ═══ PRIMARY PALETTE ═══ */
+  --teal:        #00BFA6;
+  --teal-light:  #00D4B8;
+  --teal-mid:    #008F7A;
+  --teal-dark:   #005F52;
+  --teal-10:     rgba(0,191,166,0.10);
+  --teal-20:     rgba(0,191,166,0.20);
+
+  /* ═══ NEUTRALS ═══ */
+  --navy:        #060F2A;
+  --navy-mid:    #0D1B40;
+  --navy-soft:   #1A2D5A;
+  --slate:       #2E3F6F;
+  --muted:       #6B7A99;
+  --border:      #1E2D5A;
+  --surface:     #0B1528;
+  --elevated:    #0F1E38;
+
+  /* ═══ ACCENT ═══ */
+  --amber:       #FFAB00;
+  --amber-dark:  #CC8800;
+  --red:         #FF4757;
+  --green:       #22C55E;
+
+  /* ═══ LIGHT THEME ═══ */
+  --bg-light:    #F4FDFB;
+  --bg-white:    #FFFFFF;
+  --text-dark:   #060F2A;
+
+  /* ═══ TYPOGRAPHY ═══ */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'Plus Jakarta Sans', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--navy);
+  color: #E8EDF8;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 2px; }
+
+/* ── SIDEBAR NAV ── */
+.sidebar {
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  width: 220px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 32px 0;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.sidebar-logo {
+  padding: 0 24px 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.sidebar-logo .mark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.sidebar-logo svg { width: 28px; height: 28px; }
+
+.sidebar-logo .wordmark {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 15px;
+  color: #FFF;
+  letter-spacing: -0.3px;
+}
+
+.sidebar-logo .wordmark span { color: var(--teal); }
+
+.sidebar-logo .version {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.nav-section {
+  padding: 0 16px;
+  margin-bottom: 8px;
+}
+
+.nav-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0 8px;
+  margin-bottom: 4px;
+}
+
+.nav-link {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+  margin-bottom: 1px;
+}
+
+.nav-link:hover, .nav-link.active {
+  background: var(--teal-10);
+  color: var(--teal);
+}
+
+/* ── MAIN CONTENT ── */
+.main {
+  margin-left: 220px;
+  min-height: 100vh;
+}
+
+/* ── SECTIONS ── */
+.section {
+  padding: 80px 60px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:nth-child(even) {
+  background: var(--surface);
+}
+
+.section-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  color: #FFF;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.section-desc {
+  font-size: 15px;
+  color: var(--muted);
+  max-width: 600px;
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+
+/* ── HERO BANNER ── */
+.hero {
+  background: var(--navy);
+  padding: 100px 60px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(0,191,166,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: 30%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,171,0,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--teal-10);
+  border: 1px solid var(--teal-20);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+}
+
+.hero-badge::before { content: '◆'; font-size: 8px; }
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 800;
+  color: #FFF;
+  letter-spacing: -2px;
+  line-height: 1.0;
+  margin-bottom: 8px;
+}
+
+.hero-title span { color: var(--teal); }
+
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+}
+
+.hero-tagline {
+  font-size: 16px;
+  color: var(--muted);
+  font-weight: 400;
+  margin-bottom: 48px;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-meta-item .label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-meta-item .value {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--teal);
+  font-weight: 500;
+}
+
+/* ── COLOR GRID ── */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.color-card {
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 1px solid var(--border);
+}
+
+.color-card:hover { transform: translateY(-3px); }
+
+.color-swatch {
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  position: relative;
+}
+
+.color-swatch::after {
+  content: 'CLICK TO COPY';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.color-card:hover .color-swatch::after { opacity: 1; }
+
+.color-info {
+  padding: 14px;
+  background: var(--elevated);
+}
+
+.color-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  color: #FFF;
+  margin-bottom: 4px;
+}
+
+.color-hex {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.color-role {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.copied-toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: var(--teal);
+  color: var(--navy);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.copied-toast.show { opacity: 1; transform: translateY(0); }
+
+/* ── LOGO SECTION ── */
+.logo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.logo-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.logo-preview {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.logo-preview.light-bg { background: #FFFFFF; }
+.logo-preview.dark-bg { background: var(--navy); }
+.logo-preview.teal-bg { background: var(--teal); }
+.logo-preview.pattern-bg {
+  background: var(--navy);
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.logo-card-info {
+  background: var(--elevated);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-card-info .name {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFF;
+}
+
+.logo-card-info .desc {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.download-btn {
+  background: var(--teal-10);
+  border: 1px solid var(--teal-20);
+  color: var(--teal);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.download-btn:hover {
+  background: var(--teal);
+  color: var(--navy);
+}
+
+/* ── TYPOGRAPHY SPECIMENS ── */
+.type-specimen {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  background: var(--elevated);
+  margin-bottom: 20px;
+}
+
+.type-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.type-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.type-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+/* ── SPACING SYSTEM ── */
+.spacing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.spacing-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.spacing-bar {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-mid) 100%);
+  width: 40px;
+  border-radius: 4px;
+}
+
+.spacing-name {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.spacing-val {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+  font-weight: 600;
+}
+
+/* ── COMPONENT EXAMPLES ── */
+.component-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: var(--teal);
+  color: var(--navy);
+}
+
+.btn-primary:hover {
+  background: var(--teal-light);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0,191,166,0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1.5px solid var(--teal);
+  color: var(--teal);
+}
+
+.btn-secondary:hover {
+  background: var(--teal-10);
+}
+
+.btn-ghost {
+  background: var(--elevated);
+  color: #E8EDF8;
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover { border-color: var(--muted); }
+
+.btn-amber {
+  background: var(--amber);
+  color: var(--navy);
+}
+
+.btn-sm { padding: 8px 16px; font-size: 12px; }
+.btn-lg { padding: 16px 32px; font-size: 16px; }
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.badge-teal { background: var(--teal-10); border: 1px solid var(--teal-20); color: var(--teal); }
+.badge-amber { background: rgba(255,171,0,0.10); border: 1px solid rgba(255,171,0,0.2); color: var(--amber); }
+.badge-red { background: rgba(255,71,87,0.10); border: 1px solid rgba(255,71,87,0.2); color: var(--red); }
+.badge-muted { background: rgba(107,122,153,0.10); border: 1px solid rgba(107,122,153,0.2); color: var(--muted); }
+
+/* Cards */
+.card-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.card-demo {
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.25s;
+  cursor: default;
+}
+
+.card-demo:hover {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 1px rgba(0,191,166,0.2);
+  transform: translateY(-2px);
+}
+
+.card-demo-icon {
+  width: 44px; height: 44px;
+  background: var(--teal-10);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.card-demo-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFF;
+  margin-bottom: 8px;
+}
+
+.card-demo-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Stats row */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--teal);
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── PATTERN SECTION ── */
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.pattern-card {
+  height: 140px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.pattern-label {
+  position: relative;
+  z-index: 2;
+  padding: 12px 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0.4);
+  width: 100%;
+}
+
+/* ── ICON SYSTEM ── */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 8px;
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.icon-item:hover {
+  background: var(--teal-10);
+  border-color: var(--teal);
+}
+
+.icon-item .icon-sym {
+  font-size: 20px;
+}
+
+.icon-item .icon-name {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ── DO/DON'T ── */
+.dod-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.dod-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dod-header {
+  padding: 12px 20px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.dod-do .dod-header { background: rgba(34,197,94,0.15); color: var(--green); }
+.dod-dont .dod-header { background: rgba(255,71,87,0.15); color: var(--red); }
+
+.dod-body {
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 24px;
+}
+
+.dod-body ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dod-body ul li {
+  font-size: 13px;
+  color: var(--muted);
+  padding-left: 20px;
+  position: relative;
+}
+
+.dod-body ul li::before {
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.dod-do .dod-body ul li::before { content: '✓'; color: var(--green); }
+.dod-dont .dod-body ul li::before { content: '✗'; color: var(--red); }
+
+/* ── DIVIDER ── */
+.rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 40px 0;
+}
+
+/* ── TABLE ── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.data-table th {
+  background: var(--elevated);
+  padding: 12px 16px;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #E8EDF8;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table tr:hover td { background: var(--teal-10); }
+
+code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--elevated);
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--teal);
+  border: 1px solid var(--border);
+}
+
+/* ── INLINE LOGO SVGs ── */
+.inline-logo {
+  pointer-events: none;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero > * {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.hero > *:nth-child(1) { animation-delay: 0ms; }
+.hero > *:nth-child(2) { animation-delay: 100ms; }
+.hero > *:nth-child(3) { animation-delay: 200ms; }
+.hero > *:nth-child(4) { animation-delay: 300ms; }
+.hero > *:nth-child(5) { animation-delay: 400ms; }
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,191,166,0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(0,191,166,0); }
+}
+
+.btn-primary { animation: pulse 3s ease 2s infinite; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .sidebar { display: none; }
+  .main { margin-left: 0; }
+  .section { padding: 60px 24px; }
+  .logo-grid, .card-demo-grid, .stat-row, .pattern-grid { grid-template-columns: 1fr; }
+  .icon-grid { grid-template-columns: repeat(4, 1fr); }
+  .dod-grid { grid-template-columns: 1fr; }
+  .hero { padding: 60px 24px; }
+  .hero-title { font-size: 40px; }
+}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <div class="mark">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00D4B8"/>
+            <stop offset="100%" style="stop-color:#008F7A"/>
+          </linearGradient>
+        </defs>
+        <path d="M16 2 L28 9 L28 23 L16 30 L4 23 L4 9 Z" fill="url(#g1)"/>
+        <circle cx="16" cy="10" r="2" fill="#060F2A"/>
+        <circle cx="10" cy="21" r="2" fill="#060F2A"/>
+        <circle cx="22" cy="21" r="2" fill="#060F2A"/>
+        <line x1="16" y1="10" x2="10" y2="21" stroke="#060F2A" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="16" y1="10" x2="22" y2="21" stroke="#060F2A" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="10" y1="21" x2="22" y2="21" stroke="#060F2A" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="16" cy="17" r="1.5" fill="#FFF" opacity="0.8"/>
+      </svg>
+      <span class="wordmark">Smart<span>Pro</span>DS</span>
+    </div>
+    <div class="version">BRAND GUIDE v1.0</div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-label">Identity</div>
+    <a href="#overview" class="nav-link active">Overview</a>
+    <a href="#logo" class="nav-link">Logo System</a>
+    <a href="#colors" class="nav-link">Color Palette</a>
+    <a href="#typography" class="nav-link">Typography</a>
+  </div>
+
+  <div class="nav-section" style="margin-top:16px;">
+    <div class="nav-label">System</div>
+    <a href="#spacing" class="nav-link">Spacing & Grid</a>
+    <a href="#components" class="nav-link">Components</a>
+    <a href="#iconography" class="nav-link">Iconography</a>
+    <a href="#patterns" class="nav-link">Patterns</a>
+  </div>
+
+  <div class="nav-section" style="margin-top:16px;">
+    <div class="nav-label">Usage</div>
+    <a href="#voice" class="nav-link">Brand Voice</a>
+    <a href="#dod" class="nav-link">Do's & Don'ts</a>
+    <a href="#assets" class="nav-link">Asset Library</a>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+  <!-- ═══ HERO ═══ -->
+  <div class="hero" id="overview">
+    <div class="hero-badge">BRAND GUIDELINES — v1.0 — 2025</div>
+    <div class="hero-title">Smart<span>Pro</span>DS</div>
+    <div class="hero-subtitle">Brand Identity System</div>
+    <div class="hero-tagline">Smart Professional Data Solutions · Cairo, Egypt · Serving GCC & MENA</div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="label">Category</span>
+        <span class="value">MR · BI · Data Analytics</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Primary Color</span>
+        <span class="value">#00BFA6 — Electric Teal</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Founded</span>
+        <span class="value">2025</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Domain</span>
+        <span class="value">smartprods.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ LOGO SYSTEM ═══ -->
+  <section class="section" id="logo">
+    <div class="section-eyebrow">01 — Logo System</div>
+    <h2 class="section-title">The Mark</h2>
+    <p class="section-desc">The SmartProDS mark is a hexagonal data network — three nodes connected by edges, representing data points, pipelines, and insights. The hexagon references precision and the honeycomb structures of data networks.</p>
+
+    <div class="logo-grid">
+      <!-- Primary on white -->
+      <div class="logo-card">
+        <div class="logo-preview light-bg">
+          <svg viewBox="0 0 300 72" xmlns="http://www.w3.org/2000/svg" width="280" class="inline-logo">
+            <defs>
+              <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00D4B8"/>
+                <stop offset="100%" style="stop-color:#00A389"/>
+              </linearGradient>
+            </defs>
+            <path d="M36 4 L62 19 L62 49 L36 64 L10 49 L10 19 Z" fill="url(#lg1)"/>
+            <circle cx="36" cy="23" r="4" fill="#060F2A" opacity="0.9"/>
+            <circle cx="22" cy="44" r="4" fill="#060F2A" opacity="0.9"/>
+            <circle cx="50" cy="44" r="4" fill="#060F2A" opacity="0.9"/>
+            <line x1="36" y1="23" x2="22" y2="44" stroke="#060F2A" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="36" y1="23" x2="50" y2="44" stroke="#060F2A" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="22" y1="44" x2="50" y2="44" stroke="#060F2A" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="36" cy="37" r="2.5" fill="#FFF" opacity="0.6"/>
+            <line x1="74" y1="16" x2="74" y2="56" stroke="#E2E8F0" stroke-width="1"/>
+            <text x="86" y="30" font-family="'Syne', sans-serif" font-weight="700" font-size="22" fill="#060F2A" letter-spacing="-0.5">Smart</text>
+            <text x="165" y="30" font-family="'Syne', sans-serif" font-weight="700" font-size="22" fill="#00BFA6" letter-spacing="-0.5">Pro</text>
+            <text x="203" y="30" font-family="'Syne', sans-serif" font-weight="800" font-size="22" fill="#060F2A" letter-spacing="-0.5">DS</text>
+            <text x="86" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#6B7A99" letter-spacing="2">DATA INTELLIGENCE. DELIVERED.</text>
+          </svg>
+        </div>
+        <div class="logo-card-info">
+          <div><div class="name">Primary — Light BG</div><div class="desc">Use on white or light surfaces</div></div>
+          <a class="download-btn" href="smartprods-logo-primary.svg" download>↓ SVG</a>
+        </div>
+      </div>
+
+      <!-- Dark version -->
+      <div class="logo-card">
+        <div class="logo-preview dark-bg">
+          <svg viewBox="0 0 300 72" xmlns="http://www.w3.org/2000/svg" width="280" class="inline-logo">
+            <defs>
+              <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00D4B8"/>
+                <stop offset="100%" style="stop-color:#00A389"/>
+              </linearGradient>
+            </defs>
+            <path d="M36 4 L62 19 L62 49 L36 64 L10 49 L10 19 Z" fill="url(#lg2)"/>
+            <circle cx="36" cy="23" r="4" fill="#060F2A" opacity="0.9"/>
+            <circle cx="22" cy="44" r="4" fill="#060F2A" opacity="0.9"/>
+            <circle cx="50" cy="44" r="4" fill="#060F2A" opacity="0.9"/>
+            <line x1="36" y1="23" x2="22" y2="44" stroke="#060F2A" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="36" y1="23" x2="50" y2="44" stroke="#060F2A" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="22" y1="44" x2="50" y2="44" stroke="#060F2A" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="36" cy="37" r="2.5" fill="#FFF" opacity="0.6"/>
+            <line x1="74" y1="16" x2="74" y2="56" stroke="#1E2D5A" stroke-width="1"/>
+            <text x="86" y="30" font-family="'Syne', sans-serif" font-weight="700" font-size="22" fill="#FFFFFF" letter-spacing="-0.5">Smart</text>
+            <text x="165" y="30" font-family="'Syne', sans-serif" font-weight="700" font-size="22" fill="#00BFA6" letter-spacing="-0.5">Pro</text>
+            <text x="203" y="30" font-family="'Syne', sans-serif" font-weight="800" font-size="22" fill="#FFFFFF" letter-spacing="-0.5">DS</text>
+            <text x="86" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#4A6080" letter-spacing="2">DATA INTELLIGENCE. DELIVERED.</text>
+          </svg>
+        </div>
+        <div class="logo-card-info">
+          <div><div class="name">Reversed — Dark BG</div><div class="desc">Use on navy or dark surfaces</div></div>
+          <a class="download-btn" href="smartprods-logo-dark.svg" download>↓ SVG</a>
+        </div>
+      </div>
+
+      <!-- Icon only on teal -->
+      <div class="logo-card">
+        <div class="logo-preview teal-bg">
+          <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" width="80" class="inline-logo">
+            <path d="M36 4 L62 19 L62 53 L36 68 L10 53 L10 19 Z" fill="#FFFFFF" opacity="0.25"/>
+            <path d="M36 8 L58 21 L58 51 L36 64 L14 51 L14 21 Z" fill="none" stroke="#FFF" stroke-width="2" opacity="0.5"/>
+            <circle cx="36" cy="24" r="4.5" fill="#060F2A"/>
+            <circle cx="20" cy="48" r="4.5" fill="#060F2A"/>
+            <circle cx="52" cy="48" r="4.5" fill="#060F2A"/>
+            <line x1="36" y1="24" x2="20" y2="48" stroke="#060F2A" stroke-width="3" stroke-linecap="round"/>
+            <line x1="36" y1="24" x2="52" y2="48" stroke="#060F2A" stroke-width="3" stroke-linecap="round"/>
+            <line x1="20" y1="48" x2="52" y2="48" stroke="#060F2A" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="36" cy="38" r="3" fill="#FFF" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="logo-card-info">
+          <div><div class="name">Icon Mark — Teal BG</div><div class="desc">Standalone use, avatars, app icons</div></div>
+          <a class="download-btn" href="smartprods-logo-icon.svg" download>↓ SVG</a>
+        </div>
+      </div>
+
+      <!-- Icon only dark -->
+      <div class="logo-card">
+        <div class="logo-preview pattern-bg">
+          <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" width="80" class="inline-logo">
+            <defs>
+              <linearGradient id="lg3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00D4B8"/>
+                <stop offset="100%" style="stop-color:#008F7A"/>
+              </linearGradient>
+            </defs>
+            <path d="M36 4 L62 19 L62 53 L36 68 L10 53 L10 19 Z" fill="url(#lg3)"/>
+            <circle cx="36" cy="24" r="4.5" fill="#060F2A"/>
+            <circle cx="20" cy="48" r="4.5" fill="#060F2A"/>
+            <circle cx="52" cy="48" r="4.5" fill="#060F2A"/>
+            <line x1="36" y1="24" x2="20" y2="48" stroke="#060F2A" stroke-width="3" stroke-linecap="round"/>
+            <line x1="36" y1="24" x2="52" y2="48" stroke="#060F2A" stroke-width="3" stroke-linecap="round"/>
+            <line x1="20" y1="48" x2="52" y2="48" stroke="#060F2A" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="36" cy="38" r="3" fill="#FFF" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="logo-card-info">
+          <div><div class="name">Icon Mark — Dark BG</div><div class="desc">Favicon, loading screens</div></div>
+          <a class="download-btn" href="smartprods-favicon.svg" download>↓ SVG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logo clearspace -->
+    <h3 style="font-family:var(--font-display);font-size:20px;color:#FFF;margin-bottom:16px;font-weight:700;">Clear Space Rule</h3>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:24px;">Always maintain a minimum clear space equal to the height of the "S" character in the wordmark on all sides of the logo.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Usage Context</th>
+          <th>Minimum Size</th>
+          <th>Version to Use</th>
+          <th>File Format</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Website header</td><td>32px height</td><td>Primary or Reversed</td><td>SVG / PNG</td></tr>
+        <tr><td>Email signature</td><td>40px height</td><td>Primary (light bg)</td><td>PNG 2x</td></tr>
+        <tr><td>Social avatar (LinkedIn, etc.)</td><td>400×400px</td><td>Icon mark on teal</td><td>PNG</td></tr>
+        <tr><td>Favicon / browser tab</td><td>32×32px</td><td>Icon mark only</td><td>SVG / ICO</td></tr>
+        <tr><td>Presentation cover</td><td>120px height</td><td>Reversed (dark bg)</td><td>SVG / PNG 4x</td></tr>
+        <tr><td>Dashboard watermark</td><td>24px height</td><td>Icon + wordmark</td><td>PNG transparent</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══ COLOR PALETTE ═══ -->
+  <section class="section" id="colors">
+    <div class="section-eyebrow">02 — Color Palette</div>
+    <h2 class="section-title">Color System</h2>
+    <p class="section-desc">Electric Teal is the brand's primary color — replacing traditional blues to signal precision, technology, and forward momentum. Midnight Navy grounds the palette with authority. Amber adds energy and urgency.</p>
+
+    <h3 style="font-family:var(--font-display);font-size:18px;color:var(--teal);margin-bottom:20px;font-weight:700;letter-spacing:-0.3px;">PRIMARY PALETTE</h3>
+    <div class="color-grid">
+      <div class="color-card" onclick="copyColor('#00BFA6','Electric Teal')">
+        <div class="color-swatch" style="background:#00BFA6;"></div>
+        <div class="color-info">
+          <div class="color-name">Electric Teal</div>
+          <div class="color-hex">#00BFA6</div>
+          <div class="color-role">Primary Brand Color</div>
+        </div>
+      </div>
+      <div class="color-card" onclick="copyColor('#00D4B8','Teal Light')">
+        <div class="color-swatch" style="background:#00D4B8;"></div>
+        <div class="color-info">
+          <div class="color-name">Teal Light</div>
+          <div class="color-hex">#00D4B8</div>
+          <div class="color-role">Hover / Highlight</div>
+        </div>
+      </div>
+      <div class="color-card" onclick="copyColor('#008F7A','Teal Mid')">
+        <div class="color-swatch" style="background:#008F7A;"></div>
+        <div class="color-info">
+          <div class="color-name">Teal Mid</div>
+          <div class="color-hex">#008F7A</div>
+          <div class="color-role">Pressed / Active</div>
+        </div>
+      </div>
+      <div class="color-card" onclick="copyColor('#005F52','Teal Dark')">
+        <div class="color-swatch" style="background:#005F52;"></div>
+        <div class="color-info">
+          <div class="color-name">Teal Dark</div>
+          <div class="color-hex">#005F52</div>
+          <div class="color-role">Deep Shade</div>
+        </div>
+      </div>
+      <div class="color-card" onclick="copyColor('#E0FBF7','Teal Tint')">
+        <div class="color-swatch" style="background:#E0FBF7;"></div>
+        <div class="color-info">
+          <div class="color-name">Teal Tint</div>
+          <div class="color-hex">#E0FBF7</div>
+          <div class="color-role">Light BG / Wash</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--font-display);font-size:18px;color:var(--muted);margin-bottom:20px;font-weight:700;letter-spacing:-0.3px;margin-top:40px;">NEUTRALS — MIDNIGHT NAVY</h3>
+    <div class="color-grid">
+      <div class="color-card" onclick="copyColor('#060F2A','Midnight Navy')">
+        <div class="color-swatch" style="background:#060F2A;border:1px solid rgba(255,255,255,0.08);"></div>
+        <div class="color-info">
+          <div class="color-name">Midnight Navy</div>
+          <div class="color-hex">#060F2A</div>
+          <div class="color-role">Primary Dark BG</div>
+        </div>
+      </div>
+      <div class="color-card" onclick="copyColor('#0B1528','Surface')">
+        <div class="color-swatch" style="background:#0B1528;border:1px solid rgba(255,255,255,0.08);"></div>
+        <div class="color-info">
+          <div class="color-name">Surface</div>
+          <div class="color-hex">#0B1528</div>
+          <div class="color-role">Card / Section BG</div>
+        </div>
+      </div>
+      <div class="color-card" onclick="copyColor('#0F1E38','Elevated')">
+        <div class="color-swatch" style="background:#0F1E38;border:1px solid rgba(255,255,255,0.08);"></div>
+        <div class="color-info">
+          <div class="color-name">Elevated</div>
+          <div class="color-hex">#0F1E38</div>
+          <div class="color-role">Elevated Cards</div>
+        </div>
+      </div>
+      <div class="color-card" onclick="copyColor('#1E2D5A','Border')">
+        <div class="color-swatch" style="background:#1E2D5A;border:1px solid rgba(255,255,255,0.08);"></div>
+        <div class="color-info">
+          <div class="color-name">Border</div>
+          <div class="color-hex">#1E2D5A</div>
+          <div class="color-role">Dividers / Outlines</div>
+        </div>
+      </div>
+      <div class="color-card" onclick="copyColor('#6B7A99','Muted')">
+        <div class="color-swatch" style="background:#6B7A99;"></div>
+        <div class="color-info">
+          <div class="color-name">Muted</div>
+          <div class="color-hex">#6B7A99</div>
+          <div class="color-role">Secondary Text</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--font-display);font-size:18px;color:var(--amber);margin-bottom:20px;font-weight:700;letter-spacing:-0.3px;margin-top:40px;">ACCENTS</h3>
+    <div class="color-grid">
+      <div class="color-card" onclick="copyColor('#FFAB00','Amber')">
+        <div class="color-swatch" style="background:#FFAB00;"></div>
+        <div class="color-info">
+          <div class="color-name">Amber</div>
+          <div class="color-hex">#FFAB00</div>
+          <div class="color-role">CTA / Highlight</div>
+        </div>
+      </div>
+      <div class="color-card" onclick="copyColor('#FF4757','Alert Red')">
+        <div class="color-swatch" style="background:#FF4757;"></div>
+        <div class="color-info">
+          <div class="color-name">Alert Red</div>
+          <div class="color-hex">#FF4757</div>
+          <div class="color-role">Error / Negative</div>
+        </div>
+      </div>
+      <div class="color-card" onclick="copyColor('#22C55E','Success')">
+        <div class="color-swatch" style="background:#22C55E;"></div>
+        <div class="color-info">
+          <div class="color-name">Success</div>
+          <div class="color-hex">#22C55E</div>
+          <div class="color-role">Positive / Growth</div>
+        </div>
+      </div>
+      <div class="color-card" onclick="copyColor('#FFFFFF','White')">
+        <div class="color-swatch" style="background:#FFFFFF;border:1px solid #E2E8F0;"></div>
+        <div class="color-info">
+          <div class="color-name">Pure White</div>
+          <div class="color-hex">#FFFFFF</div>
+          <div class="color-role">Primary Text on Dark</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color usage table -->
+    <table class="data-table" style="margin-top:40px;">
+      <thead>
+        <tr>
+          <th>Token</th>
+          <th>Hex Value</th>
+          <th>CSS Variable</th>
+          <th>Power BI Equivalent</th>
+          <th>Use Case</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Electric Teal</td>
+          <td><code>#00BFA6</code></td>
+          <td><code>--teal</code></td>
+          <td>Theme → dataColors[0]</td>
+          <td>Primary brand, CTA buttons, key metrics, chart primary</td>
+        </tr>
+        <tr>
+          <td>Midnight Navy</td>
+          <td><code>#060F2A</code></td>
+          <td><code>--navy</code></td>
+          <td>background → tableAccent</td>
+          <td>Dark backgrounds, icon fills, text on light</td>
+        </tr>
+        <tr>
+          <td>Amber</td>
+          <td><code>#FFAB00</code></td>
+          <td><code>--amber</code></td>
+          <td>dataColors[2]</td>
+          <td>Secondary CTA, warnings, chart secondary</td>
+        </tr>
+        <tr>
+          <td>Muted</td>
+          <td><code>#6B7A99</code></td>
+          <td><code>--muted</code></td>
+          <td>foreground → secondaryText</td>
+          <td>Labels, captions, placeholder text</td>
+        </tr>
+        <tr>
+          <td>Teal Tint</td>
+          <td><code>#E0FBF7</code></td>
+          <td><code>--teal-10</code></td>
+          <td>background → visualBackground</td>
+          <td>Light-theme cards, hover states</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══ TYPOGRAPHY ═══ -->
+  <section class="section" id="typography">
+    <div class="section-eyebrow">03 — Typography</div>
+    <h2 class="section-title">Type System</h2>
+    <p class="section-desc">Three typefaces. Each serves a distinct purpose. Never mix or substitute without approval.</p>
+
+    <!-- Display -->
+    <div class="type-specimen">
+      <div class="type-label">DISPLAY — SYNE</div>
+      <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:56px;color:#FFF;letter-spacing:-2px;line-height:1.0;">Data Intelligence<br/>Delivered.</div>
+      <div class="type-meta">Syne ExtraBold 800 · 56px · -2px tracking · Line height 1.0<br/>Use for: H1, hero titles, section headers, display text</div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-label">HEADING — SYNE SEMIBOLD</div>
+      <div style="font-family:'Syne',sans-serif;font-weight:600;font-size:28px;color:#FFF;letter-spacing:-0.5px;">Survey Data. Cleaned. Visualized.</div>
+      <div style="font-family:'Syne',sans-serif;font-weight:600;font-size:20px;color:var(--muted);letter-spacing:-0.3px;margin-top:12px;">From raw fieldwork to client-ready dashboard</div>
+      <div class="type-meta">Syne SemiBold 600 · 28px / 20px · -0.5px tracking<br/>Use for: H2, H3, card titles, section subheadings</div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-label">BODY — PLUS JAKARTA SANS</div>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;font-size:16px;color:#E8EDF8;line-height:1.8;max-width:600px;">I turn STG, SPSS, and fieldwork exports into production-ready Power BI dashboards for MR teams — with 5+ years of NIQ-grade data engineering behind every build. Fixed price. Guaranteed delivery. Zero back-and-forth.</div>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:300;font-size:14px;color:var(--muted);line-height:1.7;max-width:600px;margin-top:16px;">Captions and supporting text use the same family at lighter weight and smaller size. Always ensure AA contrast compliance on dark backgrounds.</div>
+      <div class="type-meta">Plus Jakarta Sans 400/300 · 16px / 14px · 1.7–1.8 line height<br/>Use for: body copy, descriptions, form labels, tooltips</div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-label">MONOSPACE — JETBRAINS MONO</div>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-bottom:16px;">
+        <span class="badge badge-teal">◆ AVAILABLE</span>
+        <span class="badge badge-amber">MULTI-WAVE</span>
+        <span class="badge badge-muted">v1.0.0</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:24px;color:var(--teal);font-weight:700;">$1,500</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--muted);">5 DAYS · SPRINT TIER</span>
+      </div>
+      <code style="display:block;padding:16px;font-size:13px;line-height:1.6;">--teal: #00BFA6; / --navy: #060F2A; / --amber: #FFAB00;</code>
+      <div class="type-meta">JetBrains Mono 400/500 · Any size · 1.5 line height<br/>Use for: numbers, stats, labels, badges, code, hex values, metadata</div>
+    </div>
+
+    <!-- Type scale table -->
+    <table class="data-table">
+      <thead>
+        <tr><th>Scale</th><th>Font</th><th>Size</th><th>Weight</th><th>Tracking</th><th>Use</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Display</td><td>Syne</td><td>56–72px</td><td>800</td><td>-2px</td><td>Hero titles</td></tr>
+        <tr><td>H1</td><td>Syne</td><td>40–48px</td><td>800</td><td>-1.5px</td><td>Page titles</td></tr>
+        <tr><td>H2</td><td>Syne</td><td>28–32px</td><td>700</td><td>-1px</td><td>Section titles</td></tr>
+        <tr><td>H3</td><td>Syne</td><td>20–24px</td><td>600</td><td>-0.5px</td><td>Card titles</td></tr>
+        <tr><td>Body L</td><td>Plus Jakarta Sans</td><td>16–18px</td><td>400</td><td>0</td><td>Lead body text</td></tr>
+        <tr><td>Body</td><td>Plus Jakarta Sans</td><td>14–15px</td><td>400</td><td>0</td><td>Default body</td></tr>
+        <tr><td>Caption</td><td>Plus Jakarta Sans</td><td>12px</td><td>300</td><td>0</td><td>Captions, notes</td></tr>
+        <tr><td>Label</td><td>JetBrains Mono</td><td>10–11px</td><td>400</td><td>2–3px</td><td>Eyebrows, tags</td></tr>
+        <tr><td>Data</td><td>JetBrains Mono</td><td>24–36px</td><td>700</td><td>-1px</td><td>Stats, metrics</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══ SPACING ═══ -->
+  <section class="section" id="spacing">
+    <div class="section-eyebrow">04 — Spacing & Grid</div>
+    <h2 class="section-title">Spatial System</h2>
+    <p class="section-desc">All spacing uses a base-8 system. Every value is a multiple of 4px or 8px for consistent vertical rhythm.</p>
+
+    <div class="spacing-grid">
+      <div class="spacing-item"><div class="spacing-bar" style="height:4px;"></div><div class="spacing-name">XS</div><div class="spacing-val">4px</div></div>
+      <div class="spacing-item"><div class="spacing-bar" style="height:8px;"></div><div class="spacing-name">SM</div><div class="spacing-val">8px</div></div>
+      <div class="spacing-item"><div class="spacing-bar" style="height:12px;"></div><div class="spacing-name">SM+</div><div class="spacing-val">12px</div></div>
+      <div class="spacing-item"><div class="spacing-bar" style="height:16px;"></div><div class="spacing-name">MD</div><div class="spacing-val">16px</div></div>
+      <div class="spacing-item"><div class="spacing-bar" style="height:20px;"></div><div class="spacing-name">MD+</div><div class="spacing-val">20px</div></div>
+      <div class="spacing-item"><div class="spacing-bar" style="height:24px;"></div><div class="spacing-name">LG</div><div class="spacing-val">24px</div></div>
+      <div class="spacing-item"><div class="spacing-bar" style="height:32px;"></div><div class="spacing-name">LG+</div><div class="spacing-val">32px</div></div>
+      <div class="spacing-item"><div class="spacing-bar" style="height:40px;"></div><div class="spacing-name">XL</div><div class="spacing-val">40px</div></div>
+      <div class="spacing-item"><div class="spacing-bar" style="height:48px;"></div><div class="spacing-name">XL+</div><div class="spacing-val">48px</div></div>
+      <div class="spacing-item"><div class="spacing-bar" style="height:60px;"></div><div class="spacing-name">2XL</div><div class="spacing-val">60px</div></div>
+      <div class="spacing-item"><div class="spacing-bar" style="height:80px;"></div><div class="spacing-name">3XL</div><div class="spacing-val">80px</div></div>
+      <div class="spacing-item"><div class="spacing-bar" style="height:120px;"></div><div class="spacing-name">4XL</div><div class="spacing-val">120px</div></div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Grid Property</th><th>Desktop (1440px)</th><th>Tablet (768px)</th><th>Mobile (390px)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Max content width</td><td>1120px</td><td>720px</td><td>100%</td></tr>
+        <tr><td>Horizontal padding</td><td>60px</td><td>40px</td><td>20px</td></tr>
+        <tr><td>Column count</td><td>12</td><td>8</td><td>4</td></tr>
+        <tr><td>Gutter</td><td>24px</td><td>20px</td><td>16px</td></tr>
+        <tr><td>Section padding (vertical)</td><td>120px</td><td>80px</td><td>60px</td></tr>
+        <tr><td>Border radius — card</td><td>12px</td><td>12px</td><td>8px</td></tr>
+        <tr><td>Border radius — button</td><td>8px</td><td>8px</td><td>8px</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══ COMPONENTS ═══ -->
+  <section class="section" id="components">
+    <div class="section-eyebrow">05 — Components</div>
+    <h2 class="section-title">UI Components</h2>
+    <p class="section-desc">Production-ready components for web, presentations, and dashboards. All built on the brand's color and type systems.</p>
+
+    <!-- Buttons -->
+    <h3 style="font-family:var(--font-display);font-size:20px;color:#FFF;margin-bottom:20px;font-weight:700;">Buttons</h3>
+    <div class="component-row">
+      <button class="btn btn-primary">Book a Call →</button>
+      <button class="btn btn-secondary">View Portfolio</button>
+      <button class="btn btn-ghost">Learn More</button>
+      <button class="btn btn-amber">Get Quote</button>
+    </div>
+    <div class="component-row">
+      <button class="btn btn-primary btn-sm">Small →</button>
+      <button class="btn btn-primary">Default →</button>
+      <button class="btn btn-primary btn-lg">Large Action →</button>
+    </div>
+
+    <hr class="rule"/>
+
+    <!-- Badges -->
+    <h3 style="font-family:var(--font-display);font-size:20px;color:#FFF;margin-bottom:20px;font-weight:700;">Badges & Labels</h3>
+    <div class="component-row">
+      <span class="badge badge-teal">◆ AVAILABLE FOR PROJECTS</span>
+      <span class="badge badge-amber">⚡ MULTI-WAVE</span>
+      <span class="badge badge-red">● URGENT</span>
+      <span class="badge badge-muted">5 DAYS DELIVERY</span>
+    </div>
+    <div class="component-row">
+      <span class="badge badge-teal">SPRINT · $1,500</span>
+      <span class="badge badge-amber">TRACKER · $2,800</span>
+      <span class="badge badge-muted">ENTERPRISE · CUSTOM</span>
+    </div>
+
+    <hr class="rule"/>
+
+    <!-- Stats -->
+    <h3 style="font-family:var(--font-display);font-size:20px;color:#FFF;margin-bottom:20px;font-weight:700;">Stat Cards</h3>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-value">5+</div>
+        <div class="stat-label">Years at NIQ</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">50+</div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" style="color:var(--amber);">$1.5K</div>
+        <div class="stat-label">Sprint Price</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">5</div>
+        <div class="stat-label">Day Delivery</div>
+      </div>
+    </div>
+
+    <hr class="rule"/>
+
+    <!-- Feature Cards -->
+    <h3 style="font-family:var(--font-display);font-size:20px;color:#FFF;margin-bottom:20px;font-weight:700;">Feature Cards</h3>
+    <div class="card-demo-grid">
+      <div class="card-demo">
+        <div class="card-demo-icon">📊</div>
+        <div class="card-demo-title">Power BI Dashboards</div>
+        <div class="card-demo-desc">DAX measures, brand funnels, mystery shopping scoring, multi-wave trackers — all production-ready.</div>
+      </div>
+      <div class="card-demo">
+        <div class="card-demo-icon">🐍</div>
+        <div class="card-demo-title">Python ETL Pipelines</div>
+        <div class="card-demo-desc">STG, SPSS, XML, Excel ingestion. Automated cleaning, reshaping, and long-format output.</div>
+      </div>
+      <div class="card-demo">
+        <div class="card-demo-icon">🗺️</div>
+        <div class="card-demo-title">GIS Integration</div>
+        <div class="card-demo-desc">Geo-coded fieldwork mapping, regional analysis, location intelligence for MR projects.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ICONOGRAPHY ═══ -->
+  <section class="section" id="iconography">
+    <div class="section-eyebrow">06 — Iconography</div>
+    <h2 class="section-title">Icon System</h2>
+    <p class="section-desc">Use outlined, consistent icons. Recommended library: Lucide Icons (MIT licensed). Always use teal for interactive icons, muted for decorative.</p>
+
+    <div class="icon-grid">
+      <div class="icon-item"><span class="icon-sym">📊</span><span class="icon-name">Dashboard</span></div>
+      <div class="icon-item"><span class="icon-sym">🐍</span><span class="icon-name">Python</span></div>
+      <div class="icon-item"><span class="icon-sym">🗺️</span><span class="icon-name">GIS / Map</span></div>
+      <div class="icon-item"><span class="icon-sym">📋</span><span class="icon-name">Survey</span></div>
+      <div class="icon-item"><span class="icon-sym">⚡</span><span class="icon-name">Fast</span></div>
+      <div class="icon-item"><span class="icon-sym">🔬</span><span class="icon-name">Research</span></div>
+      <div class="icon-item"><span class="icon-sym">💡</span><span class="icon-name">Insight</span></div>
+      <div class="icon-item"><span class="icon-sym">🏦</span><span class="icon-name">Banking</span></div>
+      <div class="icon-item"><span class="icon-sym">📱</span><span class="icon-name">Telecom</span></div>
+      <div class="icon-item"><span class="icon-sym">🛒</span><span class="icon-name">FMCG</span></div>
+      <div class="icon-item"><span class="icon-sym">🚗</span><span class="icon-name">Auto</span></div>
+      <div class="icon-item"><span class="icon-sym">🏛️</span><span class="icon-name">Gov't</span></div>
+      <div class="icon-item"><span class="icon-sym">📦</span><span class="icon-name">Retail</span></div>
+      <div class="icon-item"><span class="icon-sym">🛡️</span><span class="icon-name">Insurance</span></div>
+      <div class="icon-item"><span class="icon-sym">✓</span><span class="icon-name">Check</span></div>
+      <div class="icon-item"><span class="icon-sym">→</span><span class="icon-name">Arrow</span></div>
+    </div>
+  </section>
+
+  <!-- ═══ PATTERNS ═══ -->
+  <section class="section" id="patterns">
+    <div class="section-eyebrow">07 — Patterns & Textures</div>
+    <h2 class="section-title">Visual Patterns</h2>
+    <p class="section-desc">Approved background textures and patterns for presentations, dashboards, and web sections.</p>
+
+    <div class="pattern-grid">
+      <div class="pattern-card" style="background:var(--navy);background-image:radial-gradient(rgba(0,191,166,0.15) 1px, transparent 1px);background-size:24px 24px;">
+        <div class="pattern-label">TEAL DOT GRID</div>
+      </div>
+      <div class="pattern-card" style="background:linear-gradient(135deg,var(--navy) 0%,#0A1F3C 100%);">
+        <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,191,166,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,191,166,0.05) 1px,transparent 1px);background-size:40px 40px;"></div>
+        <div class="pattern-label">TEAL LINE GRID</div>
+      </div>
+      <div class="pattern-card" style="background:radial-gradient(ellipse at top right,rgba(0,191,166,0.18) 0%,var(--navy) 60%);">
+        <div class="pattern-label">TEAL RADIAL GLOW</div>
+      </div>
+      <div class="pattern-card" style="background:var(--navy);">
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 10px,rgba(0,191,166,0.04) 10px,rgba(0,191,166,0.04) 11px);"></div>
+        <div class="pattern-label">DIAGONAL STRIPE</div>
+      </div>
+      <div class="pattern-card" style="background:linear-gradient(180deg,rgba(255,171,0,0.08) 0%,var(--navy) 100%);">
+        <div class="pattern-label">AMBER GRADIENT WASH</div>
+      </div>
+      <div class="pattern-card" style="background:var(--teal);">
+        <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(6,15,42,0.15) 1px, transparent 1px);background-size:16px 16px;"></div>
+        <div class="pattern-label">TEAL SOLID + TEXTURE</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BRAND VOICE ═══ -->
+  <section class="section" id="voice">
+    <div class="section-eyebrow">08 — Brand Voice</div>
+    <h2 class="section-title">How We Sound</h2>
+    <p class="section-desc">SmartProDS communicates with authority, clarity, and precision. We are the expert in the room — not the loudest voice, but the most trusted one.</p>
+
+    <div class="card-demo-grid">
+      <div class="card-demo" style="border-color:var(--teal);">
+        <div class="card-demo-icon">🎯</div>
+        <div class="card-demo-title">Precise</div>
+        <div class="card-demo-desc">We say exactly what we mean. No vague promises. "5-day delivery" not "fast turnaround." "$1,500 flat" not "competitive pricing."</div>
+      </div>
+      <div class="card-demo" style="border-color:var(--teal);">
+        <div class="card-demo-icon">🤝</div>
+        <div class="card-demo-title">Expert Peer</div>
+        <div class="card-demo-desc">We talk to Research Directors as equals. We understand STG, SPSS, and brand funnels — and it shows in every conversation.</div>
+      </div>
+      <div class="card-demo" style="border-color:var(--teal);">
+        <div class="card-demo-icon">⚡</div>
+        <div class="card-demo-title">Confident</div>
+        <div class="card-demo-desc">We never apologize for price. We never qualify our skills. We know what we deliver and we state it plainly.</div>
+      </div>
+    </div>
+
+    <table class="data-table">
+      <thead><tr><th>Say This</th><th>Not This</th></tr></thead>
+      <tbody>
+        <tr><td>"5-day delivery. Flat fee. Zero back-and-forth."</td><td>"We try to deliver as fast as possible at a reasonable price."</td></tr>
+        <tr><td>"Send your STG export raw — data cleaning is included."</td><td>"We can help with your data if it needs some work."</td></tr>
+        <tr><td>"The Sprint is $1,500."</td><td>"Our pricing starts from around $1,500 depending on scope."</td></tr>
+        <tr><td>"I've built this exact dashboard for NIQ clients."</td><td>"I have some experience with similar projects."</td></tr>
+        <tr><td>"5-day money-back guarantee."</td><td>"We'll do our best to meet your timeline."</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══ DO / DON'T ═══ -->
+  <section class="section" id="dod">
+    <div class="section-eyebrow">09 — Do's &amp; Don'ts</div>
+    <h2 class="section-title">Brand Usage Rules</h2>
+    <p class="section-desc">These rules protect brand consistency across all touchpoints — web, email, presentations, and dashboards.</p>
+
+    <div class="dod-grid">
+      <div class="dod-card dod-do">
+        <div class="dod-header">✓ DO</div>
+        <div class="dod-body">
+          <ul>
+            <li>Use the exact hex values from this guide in all digital work</li>
+            <li>Use Electric Teal <code>#00BFA6</code> as the primary brand color</li>
+            <li>Maintain minimum clear space around the logo at all times</li>
+            <li>Use JetBrains Mono for all numbers, statistics, and metric labels</li>
+            <li>Use the full wordmark "SmartProDS" — always one word, mixed case</li>
+            <li>Apply the dark navy background in Power BI dashboard builds</li>
+            <li>Use the teal-to-light-teal gradient for the icon mark only</li>
+            <li>Always pair the icon mark with the wordmark in formal contexts</li>
+            <li>Keep all type in approved font families</li>
+            <li>Ensure text contrast meets WCAG AA standards</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dod-card dod-dont">
+        <div class="dod-header">✗ DON'T</div>
+        <div class="dod-body">
+          <ul>
+            <li>Don't use NIQ Blurple <code>#2D6DF6</code> — that's a competitor color</li>
+            <li>Don't rotate, distort, stretch, or recolor the logo</li>
+            <li>Don't use Inter, Roboto, or Arial — they're off-brand</li>
+            <li>Don't place the logo on busy backgrounds without a clear zone</li>
+            <li>Don't write "Smart Pro DS" or "smartprods" — it's always "SmartProDS"</li>
+            <li>Don't use gradient text for body copy — reserved for the icon only</li>
+            <li>Don't use purple or generic blue gradients anywhere</li>
+            <li>Don't use more than two accent colors in any single design</li>
+            <li>Don't use the amber color for primary CTAs — it's secondary only</li>
+            <li>Don't reduce the logo below minimum size requirements</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ASSET LIBRARY ═══ -->
+  <section class="section" id="assets">
+    <div class="section-eyebrow">10 — Asset Library</div>
+    <h2 class="section-title">Brand Assets</h2>
+    <p class="section-desc">All brand assets for SmartProDS. Download, use, and apply according to the rules in this guide.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Asset</th><th>File</th><th>Format</th><th>Use Case</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Primary Logo (Light)</td>
+          <td><code>smartprods-logo-primary.svg</code></td>
+          <td>SVG</td>
+          <td>Website header, docs, email sig on white bg</td>
+        </tr>
+        <tr>
+          <td>Primary Logo (Dark)</td>
+          <td><code>smartprods-logo-dark.svg</code></td>
+          <td>SVG</td>
+          <td>Presentations, dashboard watermarks, dark bg</td>
+        </tr>
+        <tr>
+          <td>Icon Mark</td>
+          <td><code>smartprods-logo-icon.svg</code></td>
+          <td>SVG</td>
+          <td>LinkedIn avatar, app icon, social profiles</td>
+        </tr>
+        <tr>
+          <td>Favicon</td>
+          <td><code>smartprods-favicon.svg</code></td>
+          <td>SVG → ICO</td>
+          <td>Browser tab, bookmark, PWA icon</td>
+        </tr>
+        <tr>
+          <td>Brand Guidelines</td>
+          <td><code>smartprods-brand-guidelines.html</code></td>
+          <td>HTML</td>
+          <td>Full interactive brand guide (this document)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Power BI Theme JSON -->
+    <h3 style="font-family:var(--font-display);font-size:20px;color:#FFF;margin-bottom:16px;font-weight:700;margin-top:40px;">Power BI Theme JSON</h3>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:20px;">Copy and paste into Power BI Desktop → View → Themes → Browse for themes</p>
+    <div style="background:var(--elevated);border:1px solid var(--border);border-radius:12px;padding:24px;overflow-x:auto;">
+<pre style="font-family:var(--font-mono);font-size:12px;color:#E8EDF8;line-height:1.8;margin:0;">{
+  "name": "SmartProDS",
+  "dataColors": [
+    "#00BFA6", "#FFAB00", "#00D4B8",
+    "#008F7A", "#1E2D5A", "#6B7A99",
+    "#FF4757", "#22C55E"
+  ],
+  "background": "#060F2A",
+  "foreground": "#FFFFFF",
+  "tableAccent": "#00BFA6",
+  "visualStyles": {
+    "*": { "*": {
+      "background": [{ "color": { "solid": { "color": "#0B1528" }}}],
+      "border": [{ "color": { "solid": { "color": "#1E2D5A" }}}]
+    }}
+  }
+}</pre>
+    </div>
+
+    <!-- Google Workspace colors -->
+    <h3 style="font-family:var(--font-display);font-size:20px;color:#FFF;margin-bottom:16px;font-weight:700;margin-top:40px;">Google Workspace Custom Colors</h3>
+    <div class="component-row" style="flex-wrap:wrap;gap:12px;">
+      <div style="display:flex;align-items:center;gap:8px;background:var(--elevated);border:1px solid var(--border);padding:10px 16px;border-radius:8px;">
+        <div style="width:20px;height:20px;background:#00BFA6;border-radius:4px;"></div>
+        <code>#00BFA6</code>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;background:var(--elevated);border:1px solid var(--border);padding:10px 16px;border-radius:8px;">
+        <div style="width:20px;height:20px;background:#060F2A;border-radius:4px;"></div>
+        <code>#060F2A</code>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;background:var(--elevated);border:1px solid var(--border);padding:10px 16px;border-radius:8px;">
+        <div style="width:20px;height:20px;background:#FFAB00;border-radius:4px;"></div>
+        <code>#FFAB00</code>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;background:var(--elevated);border:1px solid var(--border);padding:10px 16px;border-radius:8px;">
+        <div style="width:20px;height:20px;background:#6B7A99;border-radius:4px;"></div>
+        <code>#6B7A99</code>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;background:var(--elevated);border:1px solid var(--border);padding:10px 16px;border-radius:8px;">
+        <div style="width:20px;height:20px;background:#E0FBF7;border-radius:4px;border:1px solid #ddd;"></div>
+        <code>#E0FBF7</code>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Toast notification -->
+<div class="copied-toast" id="toast">Copied to clipboard!</div>
+
+<script>
+// Copy color on click
+function copyColor(hex, name) {
+  navigator.clipboard.writeText(hex).then(() => {
+    const toast = document.getElementById('toast');
+    toast.textContent = `${name} — ${hex} copied!`;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+  });
+}
+
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id], div[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+sections.forEach(s => observer.observe(s));
+
+// Counter animation
+const counters = document.querySelectorAll('.stat-value');
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const text = el.textContent;
+      const num = parseFloat(text.replace(/[^0-9.]/g, ''));
+      if (!isNaN(num) && num > 0) {
+        let start = 0;
+        const duration = 1200;
+        const step = (timestamp) => {
+          if (!start) start = timestamp;
+          const progress = Math.min((timestamp - start) / duration, 1);
+          const current = Math.floor(progress * num * 10) / 10;
+          el.textContent = text.replace(/[\d.]+/, current);
+          if (progress < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      }
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+counters.forEach(c => counterObserver.observe(c));
+</script>
+</body>
+</html>

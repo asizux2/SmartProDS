@@ -1,0 +1,32 @@
+<svg viewBox="0 0 340 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SmartProDS Logo Dark">
+  <defs>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4B8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00A389;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="340" height="90" rx="8" fill="#060F2A"/>
+
+  <!-- ICON MARK -->
+  <path d="M45 11 L71 26 L71 56 L45 71 L19 56 L19 26 Z" fill="url(#tealGrad)"/>
+  <circle cx="45" cy="30" r="4" fill="#060F2A" opacity="0.9"/>
+  <circle cx="31" cy="51" r="4" fill="#060F2A" opacity="0.9"/>
+  <circle cx="59" cy="51" r="4" fill="#060F2A" opacity="0.9"/>
+  <line x1="45" y1="30" x2="31" y2="51" stroke="#060F2A" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="45" y1="30" x2="59" y2="51" stroke="#060F2A" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="31" y1="51" x2="59" y2="51" stroke="#060F2A" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="45" cy="43" r="2.5" fill="#FFFFFF" opacity="0.6"/>
+
+  <!-- Divider -->
+  <line x1="86" y1="22" x2="86" y2="68" stroke="#1E2D5A" stroke-width="1"/>
+
+  <!-- WORDMARK on dark -->
+  <text x="100" y="40" font-family="'Syne', 'Segoe UI', sans-serif" font-weight="700" font-size="24" fill="#FFFFFF" letter-spacing="-0.5">Smart</text>
+  <text x="189" y="40" font-family="'Syne', 'Segoe UI', sans-serif" font-weight="700" font-size="24" fill="#00BFA6" letter-spacing="-0.5">Pro</text>
+  <text x="231" y="40" font-family="'Syne', 'Segoe UI', sans-serif" font-weight="800" font-size="24" fill="#FFFFFF" letter-spacing="-0.5">DS</text>
+
+  <!-- Tagline -->
+  <text x="100" y="62" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-weight="400" font-size="11" fill="#4A6080" letter-spacing="2">DATA INTELLIGENCE. DELIVERED.</text>
+</svg>
