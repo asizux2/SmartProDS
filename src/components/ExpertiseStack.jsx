@@ -1,10 +1,10 @@
 import { useInView } from '../hooks/useInView'
 
 const columns = [
-  { title: 'DATA VISUALIZATION',   items: ['Power BI (DAX, Power Query)','Custom SVG Measures','Interactive Dashboards','Theme Engineering (JSON)'] },
-  { title: 'DATA ENGINEERING',     items: ['Python (Pandas, OpenPyXL)','XML / SPSS / STG Parsing','ETL Pipeline Design','Long-format Reshaping'] },
+  { title: 'AI & VIBE CODING',   items: ['Autonomous Agents (Openclaw)','Prompt Engineering (Claude)','Local RAGs & Web Scrappers','Workflow Automations'] },
+  { title: 'DATA ENGINEERING',     items: ['Python (Pandas, OpenPyXL)','Master Data (MD) Management','ETL Pipeline Design','Long-format Reshaping'] },
   { title: 'RESEARCH METHODOLOGY', items: ['Quantitative MR (BHT, MS, NPS)','Brand Funnels & Tracking','Desk Research','Data Collection & QC'] },
-  { title: 'SPATIAL & OPERATIONS', items: ['GIS (Fieldwork Mapping)','Regional Operations (4 regions)','Survey Design','MR Operations Management'] },
+  { title: 'SPATIAL & OPERATIONS', items: ['GIS (Fieldwork Mapping)','Regional Operations (4 regions)','Data Ops Dashboarding','MR Operations Management'] },
 ]
 
 export default function ExpertiseStack() {

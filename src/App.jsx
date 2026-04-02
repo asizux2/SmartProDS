@@ -7,6 +7,7 @@ import Offer from './components/Offer'
 import Portfolio from './components/Portfolio'
 import CompanyIntel from './components/CompanyIntel'
 import ClientRoster from './components/ClientRoster'
+import AboutMe from './components/AboutMe'
 import ExpertiseStack from './components/ExpertiseStack'
 import Pricing from './components/Pricing'
 import HowItWorks from './components/HowItWorks'
@@ -30,6 +31,7 @@ export default function App() {
       <Portfolio onOpenDemo={() => setDashboardOpen(true)} />
       <CompanyIntel onOpenDashboard={setSelectedCompany} />
       <ClientRoster />
+      <AboutMe />
       <ExpertiseStack />
       <Pricing />
       <HowItWorks />
