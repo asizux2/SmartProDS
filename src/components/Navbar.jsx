@@ -29,7 +29,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
-  const links = ['Work', 'Intel', 'Services', 'Pricing', 'About']
+  const links = ['Work', 'Intel', 'Research', 'Services', 'Pricing', 'About']
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"

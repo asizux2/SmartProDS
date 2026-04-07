@@ -6,6 +6,7 @@ import Problem from './components/Problem'
 import Offer from './components/Offer'
 import Portfolio from './components/Portfolio'
 import CompanyIntel from './components/CompanyIntel'
+import MarketResearch from './components/MarketResearch'
 import ClientRoster from './components/ClientRoster'
 import AboutMe from './components/AboutMe'
 import ExpertiseStack from './components/ExpertiseStack'
@@ -30,6 +31,7 @@ export default function App() {
       <Offer />
       <Portfolio onOpenDemo={() => setDashboardOpen(true)} />
       <CompanyIntel onOpenDashboard={setSelectedCompany} />
+      <MarketResearch />
       <ClientRoster />
       <AboutMe />
       <ExpertiseStack />

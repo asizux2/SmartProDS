@@ -2,24 +2,31 @@ import { useEffect, lazy, Suspense } from 'react'
 
 // Lazy-load each dashboard to keep initial bundle small
 const DASHBOARDS = {
-  BLabsDashboard:       lazy(() => import('./dashboards/BLabsDashboard')),
-  DicetekDashboard:     lazy(() => import('./dashboards/DicetekDashboard')),
-  ZenniDashboard:       lazy(() => import('./dashboards/ZenniDashboard')),
-  BanqueMisrDashboard:  lazy(() => import('./dashboards/BanqueMisrDashboard')),
-  DeltaDentalDashboard: lazy(() => import('./dashboards/DeltaDentalDashboard')),
-  BitechDashboard:      lazy(() => import('./dashboards/BitechDashboard')),
-  EnvisionDashboard:    lazy(() => import('./dashboards/EnvisionDashboard')),
-  PentaBDashboard:      lazy(() => import('./dashboards/PentaBDashboard')),
-  RootsMCDashboard:     lazy(() => import('./dashboards/RootsMCDashboard')),
-  TechScalerzDashboard: lazy(() => import('./dashboards/TechScalerzDashboard')),
+  BLabsDashboard:            lazy(() => import('./dashboards/BLabsDashboard')),
+  DicetekDashboard:          lazy(() => import('./dashboards/DicetekDashboard')),
+  ZenniDashboard:            lazy(() => import('./dashboards/ZenniDashboard')),
+  BanqueMisrDashboard:       lazy(() => import('./dashboards/BanqueMisrDashboard')),
+  DeltaDentalDashboard:      lazy(() => import('./dashboards/DeltaDentalDashboard')),
+  BitechDashboard:           lazy(() => import('./dashboards/BitechDashboard')),
+  EnvisionDashboard:         lazy(() => import('./dashboards/EnvisionDashboard')),
+  PentaBDashboard:           lazy(() => import('./dashboards/PentaBDashboard')),
+  RootsMCDashboard:          lazy(() => import('./dashboards/RootsMCDashboard')),
+  TechScalerzDashboard:      lazy(() => import('./dashboards/TechScalerzDashboard')),
+  // New — April 2026 job hunt qualifying companies
+  OntracSolutionsDashboard:  lazy(() => import('./dashboards/OntracSolutionsDashboard')),
+  MyloDashboard:             lazy(() => import('./dashboards/MyloDashboard')),
+  TechBizGlobalDashboard:    lazy(() => import('./dashboards/TechBizGlobalDashboard')),
 }
 
 const TEMPLATE_LABELS = {
-  'banking-nps':    '📊 NPS / CSAT Dashboard',
-  'ops-platform':   '⚙️ Ops Automation Platform',
-  'world-bank-gis': '🗺️ GIS Asset Dashboard',
-  'vodafone-etl':   '🔄 ETL Pipeline Analytics',
-  'mobil-ms':       '🔍 Mystery Shopping Dashboard',
+  'banking-nps':          '📊 NPS / CSAT Dashboard',
+  'ops-platform':         '⚙️ Ops Automation Platform',
+  'world-bank-gis':       '🗺️ GIS Asset Dashboard',
+  'vodafone-etl':         '🔄 ETL Pipeline Analytics',
+  'mobil-ms':             '🔍 Mystery Shopping Dashboard',
+  'telecom-bi':           '📡 Telecom BI Analytics',
+  'fintech-bnpl':         '💳 BNPL Portfolio Dashboard',
+  'financial-analytics':  '💰 Financial Analytics',
 }
 
 function LoadingSpinner() {
