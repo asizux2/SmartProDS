@@ -168,7 +168,7 @@ export default function CompanyIntel({ onOpenDashboard }) {
               <span style={{ color: '#2D6DF6' }}>+ PROOF MATCH</span>
             </h2>
             <p className="text-sm max-w-sm" style={{ color: '#6B6B6B', fontFamily: 'DM Sans, sans-serif' }}>
-              10 companies researched. Each card includes industry context, pain points, and a tailored
+              {COMPANIES.length} companies researched. Each card includes industry context, pain points, and a tailored
               interactive portfolio dashboard.
             </p>
           </div>
@@ -178,7 +178,7 @@ export default function CompanyIntel({ onOpenDashboard }) {
         <div className={`grid grid-cols-4 gap-px mb-10 border transition-all duration-700 delay-100 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
           style={{ borderColor: '#222222' }}>
           {[
-            { v: '10', l: 'COMPANIES RESEARCHED' },
+            { v: COMPANIES.length.toString(), l: 'COMPANIES RESEARCHED' },
             { v: '3',  l: 'COUNTRIES COVERED' },
             { v: '8',  l: 'HIGH-FIT TARGETS' },
             { v: '100%', l: 'PROOF BANK BACKED' },
