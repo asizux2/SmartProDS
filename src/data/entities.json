@@ -1,0 +1,36 @@
+{
+  "entities": [
+    {
+      "id": "talabat",
+      "name": "Talabat Egypt",
+      "slug": "talabat",
+      "industry": "Quick Commerce",
+      "market": "Egypt",
+      "stage": "V2-complete",
+      "status": "active",
+      "lastUpdated": "2026-04-19",
+      "research": {
+        "deepDives": 7,
+        "v1": ["unit-economics", "quick-commerce-benchmark", "restaurant-partner", "corporate-b2b", "consumer-segmentation", "churn-prediction", "dark-store-roi"],
+        "v2": ["unit-economics-v2", "quick-commerce-benchmark-v2", "partner-retention-program-v2", "corporate-account-strategy-v2", "churn-prediction-v2", "dark-store-roi-v2"]
+      },
+      "data": {
+        "hasSyntheticSurveys": true,
+        "restaurantPartnerResponses": 200,
+        "consumerSegmentationResponses": 200,
+        "confidence": "synthetic"
+      },
+      "dashboard": {
+        "component": "TalabatDashboard",
+        "path": "/research/talabat",
+        "metrics": ["nps", "arpu", "retention", "churn", "market-share"],
+        "trackingEnabled": true
+      }
+    }
+  ],
+  "metadata": {
+    "lastSync": "2026-04-19",
+    "totalEntities": 1,
+    "platform": "SmartProDS Research Platform v1.0"
+  }
+}

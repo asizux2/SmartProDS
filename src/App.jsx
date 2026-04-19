@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, Suspense, lazy } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import CredibilityBar from './components/CredibilityBar'
@@ -18,41 +19,70 @@ import Footer from './components/Footer'
 import DashboardDemo from './components/DashboardDemo'
 import CompanyDashboardModal from './components/CompanyDashboardModal'
 
+const ResearchHub = lazy(() => import('./pages/ResearchHub'))
+const DashboardHub = lazy(() => import('./pages/DashboardHub'))
+const ClientCRM = lazy(() => import('./pages/ClientCRM'))
+const SkillsLibrary = lazy(() => import('./pages/SkillsLibrary'))
+
 export default function App() {
   const [dashboardOpen, setDashboardOpen] = useState(false)
   const [selectedCompany, setSelectedCompany] = useState(null)
 
   return (
     <div className="min-h-screen" style={{ background: '#0A0A0A' }}>
-      <Navbar />
-      <Hero onOpenDemo={() => setDashboardOpen(true)} />
-      <CredibilityBar />
-      <Problem />
-      <Offer />
-      <Portfolio onOpenDemo={() => setDashboardOpen(true)} />
-      <CompanyIntel onOpenDashboard={setSelectedCompany} />
-      <MarketResearch />
-      <ClientRoster />
-      <AboutMe />
-      <ExpertiseStack />
-      <Pricing />
-      <HowItWorks />
-      <FAQ />
-      <CTASection />
-      <Footer />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Navbar />
+            <Hero onOpenDemo={() => setDashboardOpen(true)} />
+            <CredibilityBar />
+            <Problem />
+            <Offer />
+            <Portfolio onOpenDemo={() => setDashboardOpen(true)} />
+            <CompanyIntel onOpenDashboard={setSelectedCompany} />
+            <MarketResearch />
+            <ClientRoster />
+            <AboutMe />
+            <ExpertiseStack />
+            <Pricing />
+            <HowItWorks />
+            <FAQ />
+            <CTASection />
+            <Footer />
 
-      {/* Fuel Station Mystery Shopping demo */}
-      {dashboardOpen && (
-        <DashboardDemo onClose={() => setDashboardOpen(false)} />
-      )}
+            {dashboardOpen && (
+              <DashboardDemo onClose={() => setDashboardOpen(false)} />
+            )}
 
-      {/* Company Intel tailored dashboard modal */}
-      {selectedCompany && (
-        <CompanyDashboardModal
-          company={selectedCompany}
-          onClose={() => setSelectedCompany(null)}
-        />
-      )}
+            {selectedCompany && (
+              <CompanyDashboardModal
+                company={selectedCompany}
+                onClose={() => setSelectedCompany(null)}
+              />
+            )}
+          </>
+        } />
+        <Route path="/research/*" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
+            <ResearchHub />
+          </Suspense>
+        } />
+        <Route path="/dashboards/*" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
+            <DashboardHub />
+          </Suspense>
+        } />
+        <Route path="/crm" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
+            <ClientCRM />
+          </Suspense>
+        } />
+        <Route path="/skills" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
+            <SkillsLibrary />
+          </Suspense>
+        } />
+      </Routes>
     </div>
   )
 }

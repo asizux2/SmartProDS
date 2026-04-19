@@ -1,0 +1,51 @@
+Respondent_ID,Restaurant_Type,Cuisine,City,Partner_Duration,Commission_Rate,Commission_Satisfaction,Monthly_Orders,Revenue_Share,Order_Trend,Platform_Count,Switching_Intent,Payment_Satisfaction,App_Satisfaction,Order_Reliability,Profitability_Impact,Recommendation_Score
+R001,Independent,Egyptian,Cairo,1-2 years,21-25%,Somewhat dissatisfied,50-200,10-25%,Stayed same,2,Yes for right offer,2,3,3,Somewhat hurt,Probably yes
+R002,Chain Outlet,Pizza,Cairo,3-5 years,16-20%,Somewhat satisfied,201-500,26-50%,Increased slightly,3,Probably not,3,4,4,Somewhat helped,Definitely yes
+R003,Cloud Kitchen,Fast Food,Alexandria,<6 months,26-30%,Very dissatisfied,50 or less,<10%,Decreased slightly,4,Yes immediately,2,2,2,Somewhat hurt,Probably not
+R004,Independent,Asian,Giza,6+ years,21-25%,Neutral,201-500,26-50%,Stayed same,2,Not sure,3,3,4,No significant impact,Neutral
+R005,Cafe,International,Cairo,1-2 years,16-20%,Somewhat satisfied,501-1000,51-75%,Increased slightly,3,Not sure,4,4,4,Somewhat helped,Probably yes
+R006,Fast Food Outlet,Egyptian,Mansoura,6+ years,21-25%,Somewhat dissatisfied,201-500,10-25%,Stayed same,2,Yes for right offer,3,3,3,Somewhat hurt,Probably not
+R007,Independent,Pizza,Cairo,3-5 years,26-30%,Very dissatisfied,50-200,Less than 10%,Decreased slightly,3,Yes immediately,2,2,2,Significantly hurt,Definitely not
+R008,Chain Outlet,Middle Eastern,Alexandria,1-2 years,16-20%,Somewhat satisfied,201-500,26-50%,Increased slightly,2,Probably not,4,4,4,Somewhat helped,Definitely yes
+R009,Cloud Kitchen,Fast Food,Cairo,<6 months,26-30%,Very dissatisfied,50 or less,<10%,Decreased slightly,4,Yes immediately,2,2,2,Significantly hurt,Probably not
+R010,Independent,Italian,Giza,3-5 years,21-25%,Neutral,201-500,10-25%,Stayed same,2,Not sure,3,3,3,No significant impact,Neutral
+R011,Fast Food Outlet,Egyptian,Tanta,1-2 years,21-25%,Somewhat dissatisfied,50-200,10-25%,Stayed same,3,Yes for right offer,3,3,3,Somewhat hurt,Probably not
+R012,Cafe,International,Cairo,6+ years,16-20%,Somewhat satisfied,501-1000,51-75%,Increased slightly,2,Not sure,4,4,4,Somewhat helped,Probably yes
+R013,Independent,Seafood,Alexandria,3-5 years,21-25%,Somewhat dissatisfied,201-500,26-50%,Stayed same,2,Yes for right offer,3,3,3,Somewhat hurt,Probably not
+R014,Chain Outlet,Grills,Cairo,1-2 years,16-20%,Neutral,201-500,26-50%,Increased slightly,3,Not sure,4,4,4,Somewhat helped,Neutral
+R015,Cloud Kitchen,Mexican,Giza,<6 months,26-30%,Very dissatisfied,50 or less,<10%,Decreased significantly,4,Yes immediately,2,2,2,Significantly hurt,Definitely not
+R016,Independent,Egyptian,Cairo,3-5 years,21-25%,Somewhat dissatisfied,50-200,10-25%,Stayed same,2,Yes for right offer,3,3,3,Somewhat hurt,Probably not
+R017,Fast Food Outlet,Pizza,Mansoura,1-2 years,21-25%,Somewhat dissatisfied,201-500,10-25%,Stayed same,3,Yes for right offer,3,3,3,Somewhat hurt,Probably not
+R018,Chain Outlet,Asian,Cairo,6+ years,16-20%,Somewhat satisfied,501-1000,51-75%,Increased slightly,2,Probably not,4,4,4,Significantly helped,Definitely yes
+R019,Independent,Italian,Alexandria,3-5 years,21-25%,Neutral,201-500,26-50%,Stayed same,2,Not sure,3,3,4,No significant impact,Neutral
+R020,Cafe,Fast Food,Giza,1-2 years,21-25%,Somewhat dissatisfied,50-200,10-25%,Stayed same,3,Yes for right offer,3,3,3,Somewhat hurt,Probably not
+R021,Independent,Egyptian,Cairo,6+ years,16-20%,Somewhat satisfied,201-500,26-50%,Increased slightly,2,Not sure,4,4,4,Somewhat helped,Probably yes
+R022,Fast Food Outlet,Italian,Alexandria,3-5 years,21-25%,Neutral,201-500,10-25%,Stayed same,2,Not sure,3,3,3,No significant impact,Neutral
+R023,Chain Outlet,Middle Eastern,Cairo,1-2 years,16-20%,Somewhat satisfied,501-1000,51-75%,Increased slightly,3,Probably not,4,4,4,Somewhat helped,Definitely yes
+R024,Independent,Pizza,Giza,3-5 years,26-30%,Very dissatisfied,50-200,Less than 10%,Decreased slightly,3,Yes immediately,2,2,2,Significantly hurt,Probably not
+R025,Cloud Kitchen,Fast Food,Cairo,<6 months,26-30%,Very dissatisfied,50 or less,<10%,Decreased slightly,4,Yes immediately,2,2,2,Significantly hurt,Probably not
+R026,Independent,Egyptian,Mansoura,6+ years,21-25%,Somewhat dissatisfied,201-500,10-25%,Stayed same,2,Yes for right offer,3,3,3,Somewhat hurt,Probably not
+R027,Cafe,International,Cairo,3-5 years,16-20%,Neutral,201-500,26-50%,Increased slightly,2,Not sure,4,4,4,Somewhat helped,Neutral
+R028,Fast Food Outlet,Asian,Alexandria,1-2 years,21-25%,Somewhat dissatisfied,50-200,10-25%,Stayed same,3,Yes for right offer,3,3,3,Somewhat hurt,Probably not
+R029,Chain Outlet,Grills,Cairo,6+ years,16-20%,Very satisfied,501-1000,51-75%,Increased significantly,2,Probably not,5,5,5,Significantly helped,Definitely yes
+R030,Independent,Seafood,Giza,3-5 years,21-25%,Neutral,201-500,26-50%,Stayed same,2,Not sure,3,3,4,No significant impact,Neutral
+R031,Cloud Kitchen,Mexican,Tanta,<6 months,26-30%,Very dissatisfied,50 or less,<10%,Decreased significantly,4,Yes immediately,2,2,2,Significantly hurt,Definitely not
+R032,Independent,Egyptian,Cairo,1-2 years,21-25%,Somewhat dissatisfied,50-200,10-25%,Decreased slightly,3,Yes for right offer,3,3,3,Somewhat hurt,Probably not
+R033,Fast Food Outlet,Pizza,Mansoura,3-5 years,21-25%,Neutral,201-500,10-25%,Stayed same,2,Not sure,3,3,3,No significant impact,Neutral
+R034,Cafe,International,Alexandria,6+ years,16-20%,Somewhat satisfied,501-1000,51-75%,Increased slightly,2,Probably not,4,4,4,Somewhat helped,Probably yes
+R035,Independent,Italian,Cairo,3-5 years,26-30%,Very dissatisfied,50-200,Less than 10%,Decreased slightly,4,Yes immediately,2,2,2,Significantly hurt,Probably not
+R036,Chain Outlet,Middle Eastern,Giza,1-2 years,16-20%,Somewhat satisfied,201-500,26-50%,Increased slightly,3,Probably not,4,4,4,Somewhat helped,Definitely yes
+R037,Cloud Kitchen,Fast Food,Alexandria,<6 months,26-30%,Very dissatisfied,50 or less,<10%,Decreased slightly,4,Yes immediately,2,2,2,Significantly hurt,Probably not
+R038,Independent,Grills,Cairo,6+ years,21-25%,Neutral,201-500,26-50%,Stayed same,2,Not sure,3,3,4,No significant impact,Neutral
+R039,Fast Food Outlet,Egyptian,Tanta,1-2 years,21-25%,Somewhat dissatisfied,50-200,10-25%,Stayed same,3,Yes for right offer,3,3,3,Somewhat hurt,Probably not
+R040,Cafe,Italian,Mansoura,3-5 years,16-20%,Somewhat satisfied,201-500,26-50%,Increased slightly,2,Not sure,4,4,4,Somewhat helped,Probably yes
+R041,Independent,Egyptian,Cairo,3-5 years,21-25%,Somewhat dissatisfied,50-200,10-25%,Stayed same,2,Yes for right offer,3,3,3,Somewhat hurt,Probably not
+R042,Chain Outlet,Asian,Alexandria,6+ years,16-20%,Very satisfied,501-1000,51-75%,Increased significantly,2,Probably not,5,5,5,Significantly helped,Definitely yes
+R043,Cloud Kitchen,Mexican,Cairo,<6 months,26-30%,Very dissatisfied,50 or less,<10%,Decreased significantly,4,Yes immediately,2,2,2,Significantly hurt,Definitely not
+R044,Independent,Seafood,Giza,3-5 years,21-25%,Somewhat dissatisfied,201-500,26-50%,Stayed same,2,Yes for right offer,3,3,3,Somewhat hurt,Probably not
+R045,Fast Food Outlet,Pizza,Tanta,1-2 years,21-25%,Neutral,201-500,10-25%,Stayed same,2,Not sure,3,3,3,No significant impact,Neutral
+R046,Cafe,International,Cairo,6+ years,16-20%,Somewhat satisfied,501-1000,51-75%,Increased slightly,2,Probably not,4,4,4,Somewhat helped,Probably yes
+R047,Independent,Egyptian,Alexandria,3-5 years,26-30%,Very dissatisfied,50-200,Less than 10%,Decreased slightly,3,Yes immediately,2,2,2,Significantly hurt,Probably not
+R048,Chain Outlet,Grills,Mansoura,1-2 years,16-20%,Somewhat satisfied,201-500,26-50%,Increased slightly,2,Not sure,4,4,4,Somewhat helped,Definitely yes
+R049,Cloud Kitchen,Fast Food,Cairo,<6 months,26-30%,Very dissatisfied,50 or less,<10%,Decreased slightly,4,Yes immediately,2,2,2,Significantly hurt,Probably not
+R050,Independent,Italian,Giza,6+ years,21-25%,Neutral,201-500,26-50%,Stayed same,2,Not sure,3,3,4,No significant impact,Neutral

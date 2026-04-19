@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const Logo = () => (
   <svg viewBox="0 0 32 32" width="26" height="26" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +30,12 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
-  const links = ['Work', 'Intel', 'Research', 'Services', 'Pricing', 'About']
+  const links = [
+    { label: 'Research', href: '/research' },
+    { label: 'Dashboards', href: '/dashboards' },
+    { label: 'CRM', href: '/crm' },
+    { label: 'Skills', href: '/skills' },
+  ]
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
@@ -50,13 +56,13 @@ export default function Navbar() {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           {links.map(link => (
-            <a key={link} href={`#${link.toLowerCase()}`}
+            <Link key={link.label} to={link.href}
               className="text-sm font-body transition-colors duration-200"
               style={{ color: '#6B6B6B' }}
               onMouseEnter={e => (e.target.style.color = '#F5F5F5')}
               onMouseLeave={e => (e.target.style.color = '#6B6B6B')}>
-              {link}
-            </a>
+              {link.label}
+            </Link>
           ))}
         </div>
 
@@ -82,10 +88,10 @@ export default function Navbar() {
         <div className="md:hidden px-6 pb-6 pt-2 flex flex-col gap-4 border-t"
           style={{ background: '#0A0A0A', borderColor: '#222222' }}>
           {links.map(link => (
-            <a key={link} href={`#${link.toLowerCase()}`} className="text-sm"
+            <Link key={link.label} to={link.href} className="text-sm"
               style={{ color: '#F5F5F5' }} onClick={() => setMenuOpen(false)}>
-              {link}
-            </a>
+              {link.label}
+            </Link>
           ))}
           <a href="#book"
             className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold rounded"

@@ -1,0 +1,101 @@
+Respondent_ID,Age_Group,Gender,City,Occupation,Income_Level,Usage_Duration,Usage_Frequency,Primary_Device,Ordering_Context,Order_Type,Primary_Cuisine,Avg_Order_Value,Payment_Method,Overall_Satisfaction,NPS_Score,Best_Feature,Pain_Point,Price_Sensitivity,Discount_Seeking,Loyalty_Score,Switching_Risk
+R001,25-34,Male,Cairo,Student,Low,<6 months,Daily,Smartphone,Weekday dinner,Food delivery,Egyptian,150,Cash,3,5,Fast delivery,Delivery fees,5,Always,3,High
+R002,35-44,Female,Alexandria,Manager,High,3-5 years,Weekly,Smartphone,Weekend lunch,Pizza,Italian,350,Credit card,4,7,Restaurant selection,Delivery time,3,Often,2,Low
+R003,25-34,Male,Cairo,Engineer,Medium,1-2 years,Several times week,Smartphone,Weekday dinner,Food delivery,Fast food,200,Credit card,4,6,Easy app,Delivery fees,4,Always,3,Medium
+R004,18-24,Female,Cairo,Student,Low,6-12 months,Once a week,Smartphone,Late night,Fast food,Pizza,100,Cash,2,2,Free delivery,Delivery fees,5,Always,1,High
+R005,35-44,Male,Giza,Business Owner,High,6+ years,Daily,Smartphone,Family dinner,Grocery,Egyptian,500,Cash,4,8,Wide selection,No issues,2,Rarely,5,Low
+R006,25-34,Female,Alexandria,Teacher,Low,3-5 years,Weekly,Smartphone,Lunch break,Food delivery,Fast food,150,Credit card,3,4,Discounts available,Delivery fees,4,Often,2,Medium
+R007,45-54,Male,Cairo,Doctor,High,6+ years,Weekly,Desktop,Business lunch,International,Italian,400,Credit card,5,9,Quality restaurants,None,1,Rarely,5,Low
+R008,25-34,Female,Cairo,Designer,Medium,1-2 years,Several times week,Smartphone,Weekend,Food delivery,Asian,250,Digital wallet,3,5,Easy ordering,Delivery time,3,Sometimes,2,Medium
+R009,18-24,Male,Alexandria,Student,Low,<6 months,Less than monthly,Smartphone,Weekend,Fast food,Pizza,80,Cash,2,1,Promotions,Delivery fees,5,Always,1,High
+R010,35-44,Female,Cairo,HR,High,3-5 years,Weekly,Smartphone,Family dinner,Food delivery,Middle Eastern,350,Credit card,4,7,Reliable service,None,2,Sometimes,4,Low
+R011,25-34,Male,Mansoura,Developer,Medium,6-12 months,Weekly,Smartphone,Weekday dinner,Grocery,Fast food,150,Credit card,3,4,Quick delivery,Delivery delays,4,Often,2,Medium
+R012,45-54,Female,Cairo,Executive,High,6+ years,Daily,Smartphone,Weekend lunch,Food delivery,Italian,450,Credit card,5,8,Best restaurants,None,1,Rarely,5,Low
+R013,25-34,Male,Alexandria,Engineer,Medium,1-2 years,Weekly,Smartphone,Lunch break,Food delivery,Grills,200,Cash,3,5,Good selection,Delivery fees,3,Often,2,Medium
+R014,35-44,Female,Giza,Teacher,Low,3-5 years,Weekly,Smartphone,Dinner,Fast food,Egyptian,150,Credit card,3,4,Easy to use,Limited deals,4,Always,2,Medium
+R015,18-24,Male,Cairo,Student,Low,<6 months,Daily,Smartphone,Late night,Fast food,Pizza,100,Cash,2,1,Free delivery,Delivery fees,5,Always,1,High
+R016,45-54,Male,Cairo,Doctor,High,6+ years,Weekly,Smartphone,Business lunch,Food delivery,Italian,400,Credit card,5,9,Quality,None,1,Rarely,5,Low
+R017,25-34,Female,Alexandria,Designer,Medium,1-2 years,Several times week,Smartphone,Weekend,Food delivery,Asian,250,Digital wallet,3,5,Easy app,Delivery time,3,Sometimes,2,Medium
+R018,35-44,Female,Cairo,Manager,High,3-5 years,Weekly,Smartphone,Family dinner,Grocery,Middle Eastern,350,Credit card,4,7,Reliable,Premium pricing,2,Rarely,4,Low
+R019,25-34,Male,Tanta,Developer,Low,6-12 months,Weekly,Smartphone,Weekday dinner,Fast food,Egyptian,120,Cash,3,4,Discount codes,App issues,4,Often,2,Medium
+R020,18-24,Female,Cairo,Student,Low,<6 months,Weekly,Smartphone,Weekend,Fast food,Pizza,100,Cash,2,2,Promotions,Delivery fees,5,Always,1,High
+R021,35-44,Male,Alexandria,Executive,High,6+ years,Daily,Smartphone,Weekend lunch,Food delivery,Italian,400,Credit card,5,8,Good restaurants,None,1,Rarely,5,Low
+R022,25-34,Female,Giza,HR,Medium,1-2 years,Weekly,Smartphone,Lunch break,Food delivery,Fast food,200,Credit card,3,5,Easy ordering,Delivery fees,4,Often,2,Medium
+R023,45-54,Male,Cairo,Doctor,High,6+ years,Weekly,Smartphone,Business dinner,International,Italian,450,Credit card,5,9,Wide selection,None,1,Rarely,5,Low
+R024,25-34,Female,Alexandria,Teacher,Low,3-5 years,Weekly,Smartphone,Dinner,Fast food,Pizza,150,Cash,3,4,Promotions,Delivery fees,4,Often,2,Medium
+R025,18-24,Male,Cairo,Student,Low,<6 months,Daily,Smartphone,Late night,Fast food,Fast food,100,Cash,2,1,Quick delivery,Delivery fees,5,Always,1,High
+R026,35-44,Male,Mansoura,Developer,Medium,1-2 years,Weekly,Smartphone,Weekday dinner,Food delivery,Egyptian,200,Cash,3,5,Fast service,Delivery delays,3,Sometimes,2,Medium
+R027,25-34,Female,Cairo,Designer,High,3-5 years,Daily,Smartphone,Family dinner,Grocery,Middle Eastern,350,Credit card,4,7,Reliable app,None,2,Rarely,4,Low
+R028,45-54,Female,Alexandria,Executive,High,6+ years,Weekly,Smartphone,Weekend,Food delivery,Italian,400,Credit card,5,8,Best quality,None,1,Rarely,5,Low
+R029,25-34,Male,Giza,Engineer,Low,6-12 months,Weekly,Smartphone,Dinner,Fast food,Pizza,150,Cash,3,4,Discounts,Delivery fees,4,Often,2,Medium
+R030,35-44,Female,Cairo,Manager,High,3-5 years,Weekly,Smartphone,Family dinner,Food delivery,Grills,350,Credit card,4,7,Good variety,None,2,Sometimes,4,Low
+R031,18-24,Male,Cairo,Student,Low,<6 months,Daily,Smartphone,Late night,Fast food,Fast food,100,Cash,2,1,Free first order,Delivery fees,5,Always,1,High
+R032,25-34,Female,Alexandria,Designer,Medium,1-2 years,Several times week,Smartphone,Weekend,Food delivery,Asian,250,Digital wallet,3,5,Easy app,Small orders min,3,Sometimes,2,Medium
+R033,45-54,Male,Cairo,Doctor,High,6+ years,Daily,Smartphone,Business lunch,International,Italian,450,Credit card,5,9,Premium restaurants,None,1,Rarely,5,Low
+R034,25-34,Male,Tanta,Developer,Medium,3-5 years,Weekly,Smartphone,Weekday dinner,Grocery,Egyptian,200,Cash,3,5,Quick delivery,Premium pricing,3,Often,2,Medium
+R035,35-44,Female,Cairo,HR,High,6+ years,Weekly,Smartphone,Dinner,Food delivery,Middle Eastern,350,Credit card,4,7,Reliable service,None,2,Rarely,4,Low
+R036,18-24,Female,Cairo,Student,Low,<6 months,Weekly,Smartphone,Weekend,Fast food,Pizza,100,Cash,2,2,Promotions,Delivery fees,5,Always,1,High
+R037,25-34,Male,Alexandria,Engineer,Medium,1-2 years,Weekly,Smartphone,Lunch break,Food delivery,Fast food,200,Credit card,3,5,Good selection,Limited,3,Sometimes,2,Medium
+R038,45-54,Female,Giza,Executive,High,6+ years,Weekly,Smartphone,Family dinner,Food delivery,Italian,400,Credit card,5,8,Excellent quality,None,1,Rarely,5,Low
+R039,25-34,Female,Cairo,Teacher,Low,3-5 years,Weekly,Smartphone,Dinner,Fast food,Egyptian,150,Cash,3,4,Discount deals,Delivery fees,4,Often,2,Medium
+R040,35-44,Male,Mansoura,Developer,Medium,1-2 years,Several times week,Smartphone,Weekday dinner,Food delivery,Asian,250,Credit card,3,5,Easy ordering,Delivery time,3,Sometimes,2,Medium
+R041,18-24,Male,Cairo,Student,Low,<6 months,Daily,Smartphone,Late night,Fast food,Fast food,100,Cash,2,1,Fast delivery,Delivery fees,5,Always,1,High
+R042,25-34,Female,Alexandria,Designer,High,3-5 years,Weekly,Smartphone,Weekend,Food delivery,International,350,Credit card,4,7,Good app,None,2,Rarely,4,Low
+R043,45-54,Male,Cairo,Doctor,High,6+ years,Daily,Smartphone,Business lunch,International,Italian,450,Credit card,5,9,Quality restaurants,None,1,Rarely,5,Low
+R044,25-34,Male,Giza,Developer,Low,6-12 months,Weekly,Smartphone,Dinner,Fast food,Pizza,150,Cash,3,4,Discount codes,Delivery fees,4,Often,2,Medium
+R045,35-44,Female,Cairo,Manager,High,3-5 years,Weekly,Smartphone,Family dinner,Grocery,Middle Eastern,350,Credit card,4,7,Reliable,None,2,Rarely,4,Low
+R046,18-24,Female,Cairo,Student,Low,<6 months,Weekly,Smartphone,Weekend,Fast food,Fast food,100,Cash,2,2,Promotions,Delivery fees,5,Always,1,High
+R047,25-34,Male,Alexandria,Engineer,Medium,1-2 years,Weekly,Smartphone,Lunch break,Food delivery,Grills,200,Credit card,3,5,Good selection,None,3,Sometimes,2,Medium
+R048,45-54,Female,Giza,Executive,High,6+ years,Weekly,Smartphone,Weekend,Food delivery,Italian,400,Credit card,5,8,Best service,None,1,Rarely,5,Low
+R049,25-34,Female,Cairo,Teacher,Low,3-5 years,Weekly,Smartphone,Dinner,Fast food,Egyptian,150,Cash,3,4,Cheap delivery,Delivery fees,4,Often,2,Medium
+R050,35-44,Male,Mansoura,Developer,Medium,1-2 years,Several times week,Smartphone,Weekday dinner,Food delivery,Asian,250,Credit card,3,5,Easy app,None,3,Sometimes,2,Medium
+R051,18-24,Male,Cairo,Student,Low,<6 months,Daily,Smartphone,Late night,Fast food,Pizza,100,Cash,2,1,Free delivery,Delivery fees,5,Always,1,High
+R052,25-34,Female,Alexandria,Designer,High,3-5 years,Weekly,Smartphone,Weekend,Food delivery,International,350,Credit card,4,7,Good variety,None,2,Rarely,4,Low
+R053,45-54,Male,Cairo,Doctor,High,6+ years,Daily,Smartphone,Business dinner,International,Italian,450,Credit card,5,9,Premium quality,None,1,Rarely,5,Low
+R054,25-34,Male,Giza,Developer,Low,6-12 months,Weekly,Smartphone,Dinner,Fast food,Pizza,150,Cash,3,4,Promo codes,Delivery fees,4,Often,2,Medium
+R055,35-44,Female,Cairo,Manager,High,3-5 years,Weekly,Smartphone,Family dinner,Food delivery,Grills,350,Credit card,4,7,Reliable service,None,2,Rarely,4,Low
+R056,18-24,Female,Cairo,Student,Low,<6 months,Weekly,Smartphone,Weekend,Fast food,Fast food,100,Cash,2,2,Discounts,Delivery fees,5,Always,1,High
+R057,25-34,Male,Alexandria,Engineer,Medium,1-2 years,Weekly,Smartphone,Lunch break,Food delivery,Fast food,200,Credit card,3,5,Good selection,None,3,Sometimes,2,Medium
+R058,45-54,Female,Giza,Executive,High,6+ years,Weekly,Smartphone,Weekend,Food delivery,Italian,400,Credit card,5,8,Best restaurants,None,1,Rarely,5,Low
+R059,25-34,Female,Cairo,Teacher,Low,3-5 years,Weekly,Smartphone,Dinner,Fast food,Egyptian,150,Cash,3,4,Good prices,Delivery fees,4,Often,2,Medium
+R060,35-44,Male,Mansoura,Developer,Medium,1-2 years,Several times week,Smartphone,Weekday dinner,Food delivery,Asian,250,Credit card,3,5,Easy ordering,None,3,Sometimes,2,Medium
+R061,18-24,Male,Cairo,Student,Low,<6 months,Daily,Smartphone,Late night,Fast food,Fast food,100,Cash,2,1,Quick delivery,Delivery fees,5,Always,1,High
+R062,25-34,Female,Alexandria,Designer,High,3-5 years,Weekly,Smartphone,Weekend,Food delivery,International,350,Credit card,4,7,Good variety,None,2,Rarely,4,Low
+R063,45-54,Male,Cairo,Doctor,High,6+ years,Daily,Smartphone,Business lunch,International,Italian,450,Credit card,5,9,Premium restaurants,None,1,Rarely,5,Low
+R064,25-34,Male,Giza,Developer,Low,6-12 months,Weekly,Smartphone,Dinner,Fast food,Pizza,150,Cash,3,4,Promo deals,Delivery fees,4,Often,2,Medium
+R065,35-44,Female,Cairo,Manager,High,3-5 years,Weekly,Smartphone,Family dinner,Grocery,Middle Eastern,350,Credit card,4,7,Reliable,None,2,Rarely,4,Low
+R066,18-24,Female,Cairo,Student,Low,<6 months,Weekly,Smartphone,Weekend,Fast food,Fast food,100,Cash,2,2,Promotions,Delivery fees,5,Always,1,High
+R067,25-34,Male,Alexandria,Engineer,Medium,1-2 years,Weekly,Smartphone,Lunch break,Food delivery,Fast food,200,Credit card,3,5,Good selection,None,3,Sometimes,2,Medium
+R068,45-54,Female,Giza,Executive,High,6+ years,Weekly,Smartphone,Weekend,Food delivery,Italian,400,Credit card,5,8,Best service,None,1,Rarely,5,Low
+R069,25-34,Female,Cairo,Teacher,Low,3-5 years,Weekly,Smartphone,Dinner,Fast food,Egyptian,150,Cash,3,4,Good value,Delivery fees,4,Often,2,Medium
+R070,35-44,Male,Mansoura,Developer,Medium,1-2 years,Several times week,Smartphone,Weekday dinner,Food delivery,Asian,250,Credit card,3,5,Easy app,None,3,Sometimes,2,Medium
+R071,18-24,Male,Cairo,Student,Low,<6 months,Daily,Smartphone,Late night,Fast food,Pizza,100,Cash,2,1,Promotions,Delivery fees,5,Always,1,High
+R072,25-34,Female,Alexandria,Designer,High,3-5 years,Weekly,Smartphone,Weekend,Food delivery,International,350,Credit card,4,7,Easy ordering,None,2,Rarely,4,Low
+R073,45-54,Male,Cairo,Doctor,High,6+ years,Daily,Smartphone,Business dinner,International,Italian,450,Credit card,5,9,Top restaurants,None,1,Rarely,5,Low
+R074,25-34,Male,Giza,Developer,Low,6-12 months,Weekly,Smartphone,Dinner,Fast food,Pizza,150,Cash,3,4,Discounts available,Delivery fees,4,Often,2,Medium
+R075,35-44,Female,Cairo,Manager,High,3-5 years,Weekly,Smartphone,Family dinner,Food delivery,Grills,350,Credit card,4,7,Reliable,None,2,Rarely,4,Low
+R076,18-24,Female,Cairo,Student,Low,<6 months,Weekly,Smartphone,Weekend,Fast food,Fast food,100,Cash,2,2,Free delivery,Delivery fees,5,Always,1,High
+R077,25-34,Male,Alexandria,Engineer,Medium,1-2 years,Weekly,Smartphone,Lunch break,Food delivery,Fast food,200,Credit card,3,5,Good app,None,3,Sometimes,2,Medium
+R078,45-54,Female,Giza,Executive,High,6+ years,Weekly,Smartphone,Weekend,Food delivery,Italian,400,Credit card,5,8,Best quality,None,1,Rarely,5,Low
+R079,25-34,Female,Cairo,Teacher,Low,3-5 years,Weekly,Smartphone,Dinner,Fast food,Egyptian,150,Cash,3,4,Affordable,Delivery fees,4,Often,2,Medium
+R080,35-44,Male,Mansoura,Developer,Medium,1-2 years,Several times week,Smartphone,Weekday dinner,Food delivery,Asian,250,Credit card,3,5,Easy to use,None,3,Sometimes,2,Medium
+R081,18-24,Male,Cairo,Student,Low,<6 months,Daily,Smartphone,Late night,Fast food,Fast food,100,Cash,2,1,Quick delivery,Delivery fees,5,Always,1,High
+R082,25-34,Female,Alexandria,Designer,High,3-5 years,Weekly,Smartphone,Weekend,Food delivery,International,350,Credit card,4,7,Easy ordering,None,2,Rarely,4,Low
+R083,45-54,Male,Cairo,Doctor,High,6+ years,Daily,Smartphone,Business lunch,International,Italian,450,Credit card,5,9,Wide selection,None,1,Rarely,5,Low
+R084,25-34,Male,Giza,Developer,Low,6-12 months,Weekly,Smartphone,Dinner,Fast food,Pizza,150,Cash,3,4,Promo codes,Delivery fees,4,Often,2,Medium
+R085,35-44,Female,Cairo,Manager,High,3-5 years,Weekly,Smartphone,Family dinner,Grocery,Middle Eastern,350,Credit card,4,7,Reliable service,None,2,Rarely,4,Low
+R086,18-24,Female,Cairo,Student,Low,<6 months,Weekly,Smartphone,Weekend,Fast food,Fast food,100,Cash,2,2,Discount offers,Delivery fees,5,Always,1,High
+R087,25-34,Male,Alexandria,Engineer,Medium,1-2 years,Weekly,Smartphone,Lunch break,Food delivery,Fast food,200,Credit card,3,5,Good selection,None,3,Sometimes,2,Medium
+R088,45-54,Female,Giza,Executive,High,6+ years,Weekly,Smartphone,Weekend,Food delivery,Italian,400,Credit card,5,8,Top service,None,1,Rarely,5,Low
+R089,25-34,Female,Cairo,Teacher,Low,3-5 years,Weekly,Smartphone,Dinner,Fast food,Egyptian,150,Cash,3,4,Good prices,Delivery fees,4,Often,2,Medium
+R090,35-44,Male,Mansoura,Developer,Medium,1-2 years,Several times week,Smartphone,Weekday dinner,Food delivery,Asian,250,Credit card,3,5,Easy to navigate,None,3,Sometimes,2,Medium
+R091,18-24,Male,Cairo,Student,Low,<6 months,Daily,Smartphone,Late night,Fast food,Pizza,100,Cash,2,1,Free first order,Delivery fees,5,Always,1,High
+R092,25-34,Female,Alexandria,Designer,High,3-5 years,Weekly,Smartphone,Weekend,Food delivery,International,350,Credit card,4,7,Good variety,None,2,Rarely,4,Low
+R093,45-54,Male,Cairo,Doctor,High,6+ years,Daily,Smartphone,Business dinner,International,Italian,450,Credit card,5,9,Premium,None,1,Rarely,5,Low
+R094,25-34,Male,Giza,Developer,Low,6-12 months,Weekly,Smartphone,Dinner,Fast food,Pizza,150,Cash,3,4,Discount deals,Delivery fees,4,Often,2,Medium
+R095,35-44,Female,Cairo,Manager,High,3-5 years,Weekly,Smartphone,Family dinner,Food delivery,Grills,350,Credit card,4,7,Reliable,None,2,Rarely,4,Low
+R096,18-24,Female,Cairo,Student,Low,<6 months,Weekly,Smartphone,Weekend,Fast food,Pizza,100,Cash,2,2,Promotions,Delivery fees,5,Always,1,High
+R097,25-34,Male,Alexandria,Engineer,Medium,1-2 years,Weekly,Smartphone,Lunch break,Food delivery,Fast food,200,Credit card,3,5,Good ordering,None,3,Sometimes,2,Medium
+R098,45-54,Female,Giza,Executive,High,6+ years,Weekly,Smartphone,Weekend,Food delivery,Italian,400,Credit card,5,8,Best restaurants,None,1,Rarely,5,Low
+R099,25-34,Female,Cairo,Teacher,Low,3-5 years,Weekly,Smartphone,Dinner,Fast food,Egyptian,150,Cash,3,4,Affordable,Delivery fees,4,Often,2,Medium
+R100,35-44,Male,Mansoura,Developer,Medium,1-2 years,Several times week,Smartphone,Weekday dinner,Food delivery,Asian,250,Credit card,3,5,Simple app,None,3,Sometimes,2,Medium

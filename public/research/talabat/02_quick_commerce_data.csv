@@ -1,0 +1,29 @@
+Company,Model,Est_Market_Share,Dark_Stores,Delivery_Time,Funding,Valuation,AOV_Est,GMV_Share
+Talabat_Mart,Hybrid,25-30%,60+,<20 min,Delivery_Hero,Unknown,$12-18,<20%
+Breadfast,Vertical,20-25%,47,<60 min,$88M,~$400M,$15-18,15-18%
+Rabbit,Vertical,10-15%,25+,<20 min,$11M,Unknown,$10-15,8-10%
+Carrefour_Now,Retail,10%,60+,30-60 min,Corporate,Corporate,$15-20,8-10%
+
+Market_Metrics_Egypt
+Metric,Value,Source
+Market_Size_2025,$412.56M,Statista
+Market_Size_2030,$605.58M,Statista
+CAGR,7.98%,Statista
+Users_2025,8.3M,Statista
+Users_2030,11.7M,Statista
+User_Penetration_2025,6.7%,Statista
+ARPU,$52.29,Statista
+
+Operational_Comparison
+Platform,Delivery_Time,Dark_Stores,SKU_Count,Private_Label
+Talabat_Mart,<20 min,60+,7000+,Limited
+Breadfast,<60 min,47,6000-7000,40%
+Rabbit,<20 min,25+,5000+,Minimal
+Carrefour_Now,30-60 min,60+,10000+,10%
+
+App_Performance_Q2_2025
+Platform,Weekly_Downloads_Peak,MAU_Peak,Notes
+Talabat_Mart,55K-125K,4.4-4.7M,Cross-sell from food
+Breadfast,19K-39K,573-613K,Pure q-commerce
+InstaShop,14.6K-25.4K,584-637K,Acquired by Talabat
+Rabbit,6.1K-11K,104-108K,Fast growing

@@ -1,0 +1,35 @@
+{
+  "entity": "talabat",
+  "audit_date": "2026-04-19",
+  "data_sources": [
+    {
+      "file": "03_restaurant_partner_data_300.csv",
+      "source_type": "synthetic",
+      "description": "Restaurant Partner Survey - Synthetic responses based on V1 personas",
+      "response_count": 200,
+      "question_count": 52,
+      "confidence_level": "LOW",
+      "wave_date": "2026-04",
+      "notes": "Generated from Talabat Egypt V1 deep dive persona research"
+    },
+    {
+      "file": "05_consumer_segmentation_data_300.csv",
+      "source_type": "synthetic",
+      "description": "Consumer Segmentation Survey - Synthetic responses based on V1 research",
+      "response_count": 200,
+      "question_count": 50,
+      "confidence_level": "LOW",
+      "wave_date": "2026-04",
+      "notes": "Generated from Talabat Egypt V1 consumer research"
+    }
+  ],
+  "combined_metrics": {
+    "total_responses": 400,
+    "total_questions": 102,
+    "real_responses": 0,
+    "synthetic_responses": 400,
+    "combined_confidence_percentage": 0,
+    "confidence_level": "LOW",
+    "data_warning": "⚠️ 100% Synthetic Model Data - For scenario planning only"
+  }
+}

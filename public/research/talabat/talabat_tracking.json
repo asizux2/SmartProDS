@@ -1,0 +1,105 @@
+{
+  "entity": "talabat",
+  "tracking_config": {
+    "created": "2026-04-19",
+    "last_updated": "2026-04-19",
+    "refresh_frequency": "quarterly",
+    "next_wave_due": "2026-07-01"
+  },
+  "waves": [
+    {
+      "wave_id": "wave_1",
+      "wave_date": "2026-04-01",
+      "wave_label": "Initial Baseline",
+      "data_sources": [
+        {
+          "survey": "restaurant_partner",
+          "responses": 200,
+          "confidence": "LOW"
+        },
+        {
+          "survey": "consumer_segmentation",
+          "responses": 200,
+          "confidence": "LOW"
+        }
+      ],
+      "metrics": {
+        "nps": {
+          "consumer_nps": 42,
+          "partner_nps": 28
+        },
+        "satisfaction": {
+          "consumer_avg": 3.4,
+          "partner_avg": 2.9
+        },
+        "segments": {
+          "convenience_seeker": 38,
+          "price_optimizer": 25,
+          "quality_focus": 18,
+          "variety_explorer": 12,
+          "loyal_advocate": 7
+        },
+        "switching_risk": {
+          "partners_at_risk": 58,
+          "consumers_likely_to_switch": 45
+        }
+      }
+    }
+  ],
+  "metrics_tracked": [
+    {
+      "metric": "NPS",
+      "source": "consumer_segmentation",
+      "wave_1": 42,
+      "delta_1_2": null
+    },
+    {
+      "metric": "Partner_NPS",
+      "source": "restaurant_partner",
+      "wave_1": 28,
+      "delta_1_2": null
+    },
+    {
+      "metric": "Consumer_Satisfaction",
+      "source": "consumer_segmentation",
+      "wave_1": 3.4,
+      "delta_1_2": null
+    },
+    {
+      "metric": "Partner_Satisfaction",
+      "source": "restaurant_partner",
+      "wave_1": 2.9,
+      "delta_1_2": null
+    },
+    {
+      "metric": "Switching_Risk_Partners",
+      "source": "restaurant_partner",
+      "wave_1": 58,
+      "delta_1_2": null,
+      "unit": "percent"
+    },
+    {
+      "metric": "Switching_Risk_Consumers",
+      "source": "consumer_segmentation",
+      "wave_1": 45,
+      "delta_1_2": null,
+      "unit": "percent"
+    }
+  ],
+  "how_to_add_wave": {
+    "step_1": "Add new CSV file with _wave2 suffix",
+    "step_2": "Update survey_schema.json with new wave date",
+    "step_3": "Run transform to recalculate metrics",
+    "step_4": "Dashboard auto-updates with trend line",
+    "step_5": "Update this file with new wave data"
+  },
+  "dashboard_refresh": {
+    "method": "manual",
+    "steps": [
+      "1. Place new wave CSV in deep_dive folder",
+      "2. Name: 03_restaurant_partner_data_wave2.csv",
+      "3. Re-run talabat_transform.m in Power BI",
+      "4. Dashboard updates with new wave"
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "entity": "talabat",
+  "generated": "2026-04-19",
+  "surveys": [
+    {
+      "id": "restaurant_partner",
+      "name": "Restaurant Partner Survey",
+      "file": "03_restaurant_partner_data_300.csv",
+      "response_count": 200,
+      "question_count": 52,
+      "demographics": [
+        {"column": "Respondent_ID", "type": "id", "role": "respondent_key"},
+        {"column": "Restaurant_Type", "type": "categorical", "scale": "nominal"},
+        {"column": "Cuisine", "type": "categorical", "scale": "nominal"},
+        {"column": "Years_Operating", "type": "ordinal", "scale": "1-5"},
+        {"column": "City", "type": "categorical", "scale": "nominal"},
+        {"column": "Restaurant_Size", "type": "ordinal", "scale": "1-5"},
+        {"column": "Partner_Duration", "type": "ordinal", "scale": "1-5"}
+      ],
+      "metrics": [
+        {"column": "Commission_Rate", "type": "ordinal", "scale": "1-5"},
+        {"column": "Commission_Satisfaction", "type": "satisfaction", "scale": "1-5"},
+        {"column": "Monthly_Orders", "type": "ordinal", "scale": "1-5"},
+        {"column": "Revenue_Share", "type": "ordinal", "scale": "1-5"},
+        {"column": "Order_Reliability", "type": "satisfaction", "scale": "1-5"},
+        {"column": "App_Satisfaction", "type": "satisfaction", "scale": "1-5"},
+        {"column": "Payment_Satisfaction", "type": "satisfaction", "scale": "1-5"},
+        {"column": "Profitability", "type": "impact", "scale": "1-5"},
+        {"column": "Recommendation", "type": "recommendation", "scale": "1-5"}
+      ],
+      "nps_mapping": {
+        "detractor": ["Definitely not", "Probably not"],
+        "passive": ["Neutral"],
+        "promoter": ["Probably yes", "Definitely yes"]
+      },
+      "top2box": ["Somewhat satisfied", "Very satisfied"],
+      "bottom2box": ["Very dissatisfied", "Somewhat dissatisfied"]
+    },
+    {
+      "id": "consumer_segmentation",
+      "name": "Consumer Segmentation Survey",
+      "file": "05_consumer_segmentation_data_300.csv",
+      "response_count": 200,
+      "question_count": 50,
+      "demographics": [
+        {"column": "Respondent_ID", "type": "id", "role": "respondent_key"},
+        {"column": "Age_Group", "type": "categorical", "scale": "ordinal"},
+        {"column": "Gender", "type": "categorical", "scale": "nominal"},
+        {"column": "City", "type": "categorical", "scale": "nominal"},
+        {"column": "Occupation", "type": "categorical", "scale": "nominal"},
+        {"column": "Income_Level", "type": "ordinal", "scale": "1-6"},
+        {"column": "Education", "type": "categorical", "scale": "nominal"}
+      ],
+      "metrics": [
+        {"column": "Usage_Duration", "type": "ordinal", "scale": "1-5"},
+        {"column": "Usage_Frequency", "type": "frequency", "scale": "1-6"},
+        {"column": "Overall_Satisfaction", "type": "satisfaction", "scale": "1-5"},
+        {"column": "NPS_Category", "type": "nps", "scale": "detractor/passive/promoter"},
+        {"column": "Price_Sensitivity", "type": "sensitivity", "scale": "1-5"},
+        {"column": "Switching_Likelihood", "type": "likelihood", "scale": "1-5"},
+        {"column": "Platform_Loyalty", "type": "loyalty", "scale": "1-5"},
+        {"column": "AOV", "type": "ordinal", "scale": "1-5"}
+      ],
+      "segments": [
+        {"id": "convenience_seeker", "label": "Convenience Seekers", "share": 38},
+        {"id": "price_optimizer", "label": "Price Optimizers", "share": 25},
+        {"id": "quality_focus", "label": "Quality Focus", "share": 18},
+        {"id": "variety_explorer", "label": "Variety Explorers", "share": 12},
+        {"id": "loyal_advocate", "label": "Loyal Advocates", "share": 7}
+      ],
+      "nps_mapping": {
+        "detractor": ["0-3 (Detractor)"],
+        "passive": ["4-6 (Passive)"],
+        "promoter": ["7-8 (Satisfied)", "9-10 (Promoter)"]
+      },
+      "top2box": ["Somewhat satisfied", "Very satisfied"],
+      "bottom2box": ["Very dissatisfied", "Somewhat dissatisfied"]
+    }
+  ],
+  "cross_tab_dimensions": ["City", "Age_Group", "Gender", "Occupation", "Income_Level"],
+  "unified_schema": {
+    "respondent_id": "Respondent_ID",
+    "survey_source": "source_file",
+    "demographics": ["City", "Age_Group", "Gender", "Occupation", "Income_Level"],
+    "satisfaction_score": "Overall_Satisfaction",
+    "nps_category": "NPS_Category",
+    "segment": "Value_Proposition"
+  }
+}
