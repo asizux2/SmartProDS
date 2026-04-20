@@ -3,16 +3,16 @@
     {
       "id": "talabat",
       "name": "Talabat Egypt",
-      "slug": "talabat",
+      "slug": "talabat-360",
       "industry": "Quick Commerce",
       "market": "Egypt",
       "stage": "V2-complete",
       "status": "active",
       "lastUpdated": "2026-04-19",
       "research": {
-        "deepDives": 7,
-        "v1": ["unit-economics", "quick-commerce-benchmark", "restaurant-partner", "corporate-b2b", "consumer-segmentation", "churn-prediction", "dark-store-roi"],
-        "v2": ["unit-economics-v2", "quick-commerce-benchmark-v2", "partner-retention-program-v2", "corporate-account-strategy-v2", "churn-prediction-v2", "dark-store-roi-v2"]
+        "deepDives": 13,
+        "v1": ["market-position", "unit-economics", "quick-commerce-benchmark", "restaurant-partner", "corporate-b2b", "consumer-segmentation", "churn-prediction", "dark-store-roi", "competitive-map", "swot-analysis", "growth-opportunities", "risk-assessment", "strategic-recommendations"],
+        "v2": []
       },
       "data": {
         "hasSyntheticSurveys": true,
@@ -21,16 +21,41 @@
         "confidence": "synthetic"
       },
       "dashboard": {
-        "component": "TalabatDashboard",
-        "path": "/research/talabat",
+        "component": "Talabat360Dashboard",
+        "path": "/dashboard/talabat-360",
         "metrics": ["nps", "arpu", "retention", "churn", "market-share"],
+        "trackingEnabled": true
+      }
+    },
+    {
+      "id": "vodafone-egypt",
+      "name": "Vodafone Egypt",
+      "slug": "vodafone-egypt-360",
+      "industry": "Telecommunications",
+      "market": "Egypt",
+      "stage": "V2-complete",
+      "status": "active",
+      "lastUpdated": "2026-04-19",
+      "research": {
+        "deepDives": 12,
+        "v1": ["market-share", "5g-expansion", "enterprise-business", "sme-market", "customer-experience", "iot-smart-cities", "fiber-network", "arpu-analysis", "churn-rate", "competitive-analysis", "digital-services", "financial-performance"],
+        "v2": []
+      },
+      "data": {
+        "hasSyntheticSurveys": true,
+        "confidence": "synthetic"
+      },
+      "dashboard": {
+        "component": "VodafoneEgypt360Dashboard",
+        "path": "/dashboard/vodafone-egypt-360",
+        "metrics": ["nps", "arpu", "market-share", "subscriber-base", "data-revenue"],
         "trackingEnabled": true
       }
     }
   ],
   "metadata": {
     "lastSync": "2026-04-19",
-    "totalEntities": 1,
+    "totalEntities": 2,
     "platform": "SmartProDS Research Platform v1.0"
   }
 }

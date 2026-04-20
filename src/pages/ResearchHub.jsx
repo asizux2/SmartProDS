@@ -104,13 +104,13 @@ export default function ResearchHub() {
             )}
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">Dashboard</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">360° Dashboard</h2>
               <Link
-                to={`/dashboards/${selectedEntity.slug}`}
+                to={selectedEntity.dashboard?.path || `/dashboards/${selectedEntity.slug}`}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"
               >
                 <TrendingUp className="w-5 h-5" />
-                View Interactive Dashboard
+                View Interactive Dashboard →
               </Link>
             </section>
           </div>

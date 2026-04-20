@@ -1,5 +1,9 @@
-name = "smartprods"
+name = "smartprods-research"
 compatibility_date = "2026-04-07"
+
+[build]
+command = "npm run build"
+watch_dir = "./src"
 
 [assets]
 directory = "./dist"

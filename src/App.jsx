@@ -23,6 +23,8 @@ const ResearchHub = lazy(() => import('./pages/ResearchHub'))
 const DashboardHub = lazy(() => import('./pages/DashboardHub'))
 const ClientCRM = lazy(() => import('./pages/ClientCRM'))
 const SkillsLibrary = lazy(() => import('./pages/SkillsLibrary'))
+const Talabat360Dashboard = lazy(() => import('./components/dashboards/Talabat360Dashboard'))
+const VodafoneEgypt360Dashboard = lazy(() => import('./components/dashboards/VodafoneEgypt360Dashboard'))
 
 export default function App() {
   const [dashboardOpen, setDashboardOpen] = useState(false)
@@ -80,6 +82,16 @@ export default function App() {
         <Route path="/skills" element={
           <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
             <SkillsLibrary />
+          </Suspense>
+        } />
+        <Route path="/dashboard/talabat-360" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
+            <Talabat360Dashboard />
+          </Suspense>
+        } />
+        <Route path="/dashboard/vodafone-egypt-360" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
+            <VodafoneEgypt360Dashboard />
           </Suspense>
         } />
       </Routes>
