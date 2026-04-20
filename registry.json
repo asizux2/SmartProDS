@@ -1,0 +1,40 @@
+{
+  "name": "marbrain-cli",
+  "description": "MarBrain 360° - Autonomous Research Platform CLI",
+  "category": "research",
+  "install": "pip install -e .",
+  "commands": [
+    {
+      "name": "marbrain scrape",
+      "description": "Web and social media scraping"
+    },
+    {
+      "name": "marbrain pipeline",
+      "description": "Data cleaning and validation"
+    },
+    {
+      "name": "marbrain deploy",
+      "description": "Dashboard build and deploy"
+    },
+    {
+      "name": "marbrain schedule",
+      "description": "Cron job scheduling"
+    },
+    {
+      "name": "marbrain deepdive",
+      "description": "Deep dive research execution"
+    },
+    {
+      "name": "marbrain extract",
+      "description": "Entity extraction"
+    },
+    {
+      "name": "marbrain learn",
+      "description": "Learning loop optimization"
+    }
+  ],
+  "repository": "https://github.com/yourusername/marbrain-cli",
+  "documentation": "https://github.com/yourusername/marbrain-cli#readme",
+  "tags": ["research", "marketing", "analytics", "dashboard", "scraping", "ai"],
+  "version": "1.0.0"
+}
