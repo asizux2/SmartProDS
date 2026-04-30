@@ -6,7 +6,6 @@
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import ReactECharts from 'echarts-for-react';
-import dashboardData from '../../data/talabat_10k_data.json';
 
 // ─── BRAND TOKENS ──────────────────────────────────────────────────────────────
 const T = {
@@ -452,10 +451,40 @@ const TABS = [
   { id: 'map', label: '📍 Vendor Map', group: 'Intelligence' },
 ];
 
-// ─── SELF-CONTAINED WRAPPER ───────────────────────────────────────────────────
+// ─── SELF-CONTAINED WRAPPER — fetches data at runtime ────────────────────────
 
 export default function TalabatDashboard10KPage() {
-  return <TalabatDashboard10K data={dashboardData} />;
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch('/data/talabat_10k_data.json')
+      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then(setData)
+      .catch(() => {
+        // Fallback: try dynamic import (works locally)
+        import('../../data/talabat_10k_data.json')
+          .then(m => setData(m.default))
+          .catch(e => setError(e.message));
+      });
+  }, []);
+
+  if (error) return (
+    <div style={{ color: '#EF4444', padding: 40, fontFamily: 'monospace' }}>
+      Failed to load dashboard data: {error}
+    </div>
+  );
+  if (!data) return (
+    <div style={{ backgroundColor: '#0A0A0A', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ textAlign: 'center' }}>
+        <div style={{ width: 48, height: 48, border: '4px solid #003087', borderTopColor: '#FFB81C', borderRadius: '50%', animation: 'spin 0.8s linear infinite', margin: '0 auto 16px' }} />
+        <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+        <div style={{ color: '#9CA3AF', fontFamily: 'monospace', fontSize: '0.8rem' }}>Loading intelligence data...</div>
+      </div>
+    </div>
+  );
+
+  return <TalabatDashboard10K data={data} />;
 }
 
 // ─── MAIN DASHBOARD ───────────────────────────────────────────────────────────
