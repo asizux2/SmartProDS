@@ -1,8 +1,7 @@
 /**
- * Talabat Egypt $10K Competitive Intelligence Dashboard v4 — 20 Tabs
- * PREMIUM UPGRADE: ECharts WebGL · Animated KPIs · Export · Virtual Tables
+ * Talabat Egypt — Competitive Intelligence Report · 20 Tabs
+ * ECharts WebGL · Animated KPIs · Export · Virtual Tables
  * Data: REAL — 19,691 vendors + 1,812 GP reviews + 1,103 Reddit + 2,915 NLP + 121 news
- * Built by: SmartProDS Intelligence Platform
  */
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
@@ -402,30 +401,26 @@ const ExportBtn = () => {
 
 const SalesCTA = () => (
   <div style={{
-    background: `linear-gradient(135deg, ${T.navyDark} 0%, #001a4d 50%, ${T.navy} 100%)`,
-    border: `1px solid ${T.gold}`, borderRadius: 12,
-    padding: '24px 32px', margin: '28px 0 0',
-    display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16,
-    boxShadow: `0 0 30px rgba(255,184,28,0.1)`,
+    background: `linear-gradient(135deg, #0D1B2A 0%, #0a1628 100%)`,
+    border: `1px solid ${T.border}`, borderRadius: 12,
+    padding: '18px 24px', margin: '28px 0 0',
+    display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 14,
   }}>
     <div>
-      <div style={{ color: T.gold, fontSize: '0.65rem', fontFamily: MONO, marginBottom: 4, letterSpacing: '0.12em' }}>
-        SMARTPRODS — MARKET INTELLIGENCE PLATFORM
+      <div style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 700, marginBottom: 3 }}>
+        Need a custom intelligence report for your market?
       </div>
-      <div style={{ color: '#fff', fontSize: '1.15rem', fontWeight: 800, marginBottom: 4 }}>
-        Want this dashboard for YOUR company?
-      </div>
-      <div style={{ color: T.muted, fontSize: '0.78rem' }}>
-        20-tab Competitive Intelligence · Real scraped data · Power BI export · 5 Business Days
+      <div style={{ color: T.muted, fontSize: '0.75rem' }}>
+        Real data · 20+ analysis tabs · Power BI export · 5 Business Days
       </div>
     </div>
     <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-      <a href="mailto:Eslam.geogac@gmail.com?subject=Custom Dashboard Inquiry - Saw Talabat 360"
-        style={{ background: T.gold, color: '#000', padding: '10px 22px', borderRadius: 8, fontWeight: 800, textDecoration: 'none', fontSize: '0.82rem' }}>
-        💬 Request Custom Dashboard — $1,500
+      <a href="mailto:Eslam.geogac@gmail.com?subject=Custom Intelligence Report Inquiry"
+        style={{ background: T.gold, color: '#000', padding: '9px 20px', borderRadius: 8, fontWeight: 800, textDecoration: 'none', fontSize: '0.8rem' }}>
+        💬 Get in Touch
       </a>
-      <a href="https://wa.me/201000000000?text=Hi%20Eslam%2C%20I%20saw%20the%20Talabat%20360%20dashboard"
-        style={{ background: T.success, color: '#000', padding: '10px 22px', borderRadius: 8, fontWeight: 800, textDecoration: 'none', fontSize: '0.82rem' }}>
+      <a href="https://wa.me/201000000000?text=Hi%2C%20I%20saw%20the%20Talabat%20Egypt%20intelligence%20report"
+        style={{ background: '#1A2E1A', color: T.success, border: `1px solid ${T.success}44`, padding: '9px 20px', borderRadius: 8, fontWeight: 700, textDecoration: 'none', fontSize: '0.8rem' }}>
         📱 WhatsApp
       </a>
     </div>
@@ -509,10 +504,10 @@ function TalabatDashboard10K({ data }) {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 2 }}>
               <span style={{ fontSize: '1.6rem', fontWeight: 900, color: T.gold, letterSpacing: '-0.02em' }}>Talabat Egypt</span>
-              <Badge color={T.gold} textColor="#000">$10K INTELLIGENCE</Badge>
+              <span style={{ fontSize: '1rem', fontWeight: 500, color: 'rgba(255,255,255,0.7)' }}>Competitive Intelligence Report</span>
             </div>
             <div style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.65)', fontFamily: MONO }}>
-              20-Tab Competitive Deep Dive · {kpi.total_vendors?.toLocaleString()} vendors · {kpi.total_reviews?.toLocaleString()} reviews · {kpi.total_nlp_records?.toLocaleString()} NLP records · April 2026
+              20-Tab Deep Dive · {kpi.total_vendors?.toLocaleString()} vendors · {kpi.total_reviews?.toLocaleString()} reviews · {kpi.total_nlp_records?.toLocaleString()} NLP records · April 2026
             </div>
           </div>
           <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
