@@ -1,5 +1,6 @@
 name = "smartprods-research"
 compatibility_date = "2026-04-07"
+main = "src/worker.js"
 
 [build]
 command = "npm run build"
@@ -7,3 +8,4 @@ watch_dir = "./src"
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
