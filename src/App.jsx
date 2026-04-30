@@ -24,7 +24,9 @@ const DashboardHub = lazy(() => import('./pages/DashboardHub'))
 const ClientCRM = lazy(() => import('./pages/ClientCRM'))
 const SkillsLibrary = lazy(() => import('./pages/SkillsLibrary'))
 const Talabat360Dashboard = lazy(() => import('./components/dashboards/Talabat360Dashboard'))
+const TalabatDashboard10K = lazy(() => import('./components/dashboards/TalabatDashboard10K'))
 const VodafoneEgypt360Dashboard = lazy(() => import('./components/dashboards/VodafoneEgypt360Dashboard'))
+const PepsiEgypt360Dashboard = lazy(() => import('./components/dashboards/PepsiEgypt360Dashboard'))
 
 export default function App() {
   const [dashboardOpen, setDashboardOpen] = useState(false)
@@ -89,9 +91,19 @@ export default function App() {
             <Talabat360Dashboard />
           </Suspense>
         } />
+        <Route path="/dashboard/talabat-10k" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
+            <TalabatDashboard10K />
+          </Suspense>
+        } />
         <Route path="/dashboard/vodafone-egypt-360" element={
           <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
             <VodafoneEgypt360Dashboard />
+          </Suspense>
+        } />
+        <Route path="/dashboard/pepsi-egypt-360" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
+            <PepsiEgypt360Dashboard />
           </Suspense>
         } />
       </Routes>
