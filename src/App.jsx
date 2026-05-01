@@ -27,6 +27,7 @@ const Talabat360Dashboard = lazy(() => import('./components/dashboards/Talabat36
 const TalabatDashboard10K = lazy(() => import('./components/dashboards/TalabatDashboard10K'))
 const VodafoneEgypt360Dashboard = lazy(() => import('./components/dashboards/VodafoneEgypt360Dashboard'))
 const PepsiEgypt360Dashboard = lazy(() => import('./components/dashboards/PepsiEgypt360Dashboard'))
+const CompetitiveIntelDashboard = lazy(() => import('./components/dashboards/CompetitiveIntelDashboard'))
 
 export default function App() {
   const [dashboardOpen, setDashboardOpen] = useState(false)
@@ -104,6 +105,11 @@ export default function App() {
         <Route path="/dashboard/pepsi-egypt-360" element={
           <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
             <PepsiEgypt360Dashboard />
+          </Suspense>
+        } />
+        <Route path="/dashboard/competitive-intel" element={
+          <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}>
+            <CompetitiveIntelDashboard />
           </Suspense>
         } />
       </Routes>
