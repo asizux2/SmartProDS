@@ -138,14 +138,7 @@ export default function CompetitiveIntelDashboard() {
     return true;
   }), [vendors, filters]);
 
-  // ── Early returns ──
-  if (!data) return <LoadingScreen />;
-  if (data._error) return <ErrorScreen message={data._error} />;
-
-  // ── Tab navigation helpers ──
-  const visibleTabs = TABS.filter(t => t.group === activeGroup);
-  const openVendorDrawer = (v) => { setSelectedVendor(v); setIsDrawerOpen(true); };
-
+  // ── These must be BEFORE early returns (Rules of Hooks) ──
   const topAreasByVendorCount = useMemo(() => {
     const counts = {};
     vendors.forEach(v => { if (v.area) counts[v.area] = (counts[v.area] || 0) + 1; });
@@ -155,6 +148,14 @@ export default function CompetitiveIntelDashboard() {
   const vendorTypeData = useMemo(() => {
     return Object.entries(vendorStats).map(([name, value]) => ({ name, value })).sort((a, b) => b.value - a.value);
   }, [vendorStats]);
+
+  // ── Early returns (after ALL hooks) ──
+  if (!data) return <LoadingScreen />;
+  if (data._error) return <ErrorScreen message={data._error} />;
+
+  // ── Tab navigation helpers ──
+  const visibleTabs = TABS.filter(t => t.group === activeGroup);
+  const openVendorDrawer = (v) => { setSelectedVendor(v); setIsDrawerOpen(true); };
 
   return (
     <div style={{ backgroundColor: T.bg, color: T.text, minHeight: '100vh', fontFamily: 'system-ui, -apple-system, sans-serif' }}>

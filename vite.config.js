@@ -5,6 +5,10 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [react()],
   base: '/',
+  preview: {
+    port: 4173,
+    historyApiFallback: true,
+  },
   build: {
     rollupOptions: {
       output: {
